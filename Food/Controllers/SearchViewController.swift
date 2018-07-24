@@ -20,8 +20,8 @@ class SearchViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is ExpirationDateViewController {
-            let vc = segue.destination as? ExpirationDateViewController
+        if segue.destination is ExpirationDateTableViewController {
+            let vc = segue.destination as? ExpirationDateTableViewController
             vc?.foodName = searchBar.text!
 
         }

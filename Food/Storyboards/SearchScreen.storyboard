@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="-50.399999999999999" y="172.26386806596702"/>
         </scene>
-        <!--ExpirationDateViewController-->
+        <!--ExpirationDateTableViewController-->
         <scene sceneID="SDy-fh-bMx">
             <objects>
-                <viewControllerPlaceholder storyboardName="ExpirationDateScreen" referencedIdentifier="ExpirationDateViewController" id="Rt3-PM-Ox5" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ExpirationDateScreen" referencedIdentifier="ExpirationDateTableViewController" id="Rt3-PM-Ox5" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbh-Al-Po7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404" y="233"/>

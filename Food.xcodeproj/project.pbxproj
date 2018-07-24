@@ -20,6 +20,8 @@
 		B8C47D59210694420007CC31 /* ExpirationDateScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D58210694420007CC31 /* ExpirationDateScreen.storyboard */; };
 		B8C47D5B210694630007CC31 /* ExpirationDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D5A210694630007CC31 /* ExpirationDateViewController.swift */; };
 		B8C47D5F2106F45F0007CC31 /* output-onlinecsvtools.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */; };
+		B8C47D632107BD460007CC31 /* ExpirationDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D622107BD460007CC31 /* ExpirationDateTableViewCell.swift */; };
+		B8C47D662107CDF40007CC31 /* Fridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D652107CDF40007CC31 /* Fridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B8C47D58210694420007CC31 /* ExpirationDateScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpirationDateScreen.storyboard; sourceTree = "<group>"; };
 		B8C47D5A210694630007CC31 /* ExpirationDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDateViewController.swift; sourceTree = "<group>"; };
 		B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "output-onlinecsvtools.plist"; path = "../../../../Downloads/output-onlinecsvtools.plist"; sourceTree = "<group>"; };
+		B8C47D622107BD460007CC31 /* ExpirationDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDateTableViewCell.swift; sourceTree = "<group>"; };
+		B8C47D652107CDF40007CC31 /* Fridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fridge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		B869B6C6210659C1005B5EC5 /* Food */ = {
 			isa = PBXGroup;
 			children = (
+				B8C47D642107CDDF0007CC31 /* Models */,
 				B869B6DE21066938005B5EC5 /* Controllers */,
 				B869B6DC210668A5005B5EC5 /* Storyboards */,
 				B869B6C7210659C1005B5EC5 /* AppDelegate.swift */,
@@ -77,6 +82,7 @@
 				B869B6D6210659C2005B5EC5 /* Info.plist */,
 				B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */,
 				B869B6CE210659C1005B5EC5 /* Food.xcdatamodeld */,
+				B8C47D612107BD190007CC31 /* Views */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -102,6 +108,22 @@
 				B8C47D5A210694630007CC31 /* ExpirationDateViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B8C47D612107BD190007CC31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8C47D622107BD460007CC31 /* ExpirationDateTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B8C47D642107CDDF0007CC31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8C47D652107CDF40007CC31 /* Fridge.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,11 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8C47D662107CDF40007CC31 /* Fridge.swift in Sources */,
 				B869B6E4210689E1005B5EC5 /* SearchViewController.swift in Sources */,
 				B869B6CA210659C1005B5EC5 /* ViewController.swift in Sources */,
 				B869B6E221067A23005B5EC5 /* StartingScreenController.swift in Sources */,
 				B869B6C8210659C1005B5EC5 /* AppDelegate.swift in Sources */,
 				B8C47D5B210694630007CC31 /* ExpirationDateViewController.swift in Sources */,
+				B8C47D632107BD460007CC31 /* ExpirationDateTableViewCell.swift in Sources */,
 				B869B6D0210659C1005B5EC5 /* Food.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
