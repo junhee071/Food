@@ -22,17 +22,27 @@ class ExpirationDateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        print(foodName)
         //access plist file as dictionary
         if let fileUrl = Bundle.main.url(forResource: "output-onlinecsvtools", withExtension: "plist"),
         let data = try? Data(contentsOf: fileUrl) {
-            if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [[String: Any]] { // [String: Any] which ever it is
-                print(result)
+            if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String: Any]] { // [String: Any] which ever it is
+                for arr in result {
+                    let nameInArr = arr["Product"] as! String
+                    if nameInArr == foodName {
+                        print(arr["Extension period"] as! String)
+                    }
+                }
             }
         }
-    }
         
-
+           
+            
+        
+        }
+    
+        
+    
     override func didReceiveMemoryWarning() {
          super.didReceiveMemoryWarning()
     }
