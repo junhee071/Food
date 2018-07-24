@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="561-8w-fe5">
             <objects>
-                <viewController id="OhO-4r-csD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchScreenViewController" id="OhO-4r-csD" customClass="SearchViewController" customModule="Food" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gAd-KM-81E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRD-JF-rOx">
+                                <rect key="frame" x="164" y="275" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="findExpirationDateButtonTapped:" destination="OhO-4r-csD" eventType="touchUpInside" id="ZIm-Zp-SzA"/>
+                                    <segue destination="Rt3-PM-Ox5" kind="show" id="oM3-yA-GHn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -34,10 +43,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gAr-9B-FFr"/>
                     </view>
+                    <connections>
+                        <outlet property="FindExpirationDate" destination="nRD-JF-rOx" id="Jth-pM-Z7f"/>
+                        <outlet property="searchBar" destination="bzf-ux-Itg" id="e2Q-Fc-KuL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gks-jj-k8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-50.399999999999999" y="172.26386806596702"/>
+        </scene>
+        <!--ExpirationDateViewController-->
+        <scene sceneID="SDy-fh-bMx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ExpirationDateScreen" referencedIdentifier="ExpirationDateViewController" id="Rt3-PM-Ox5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bbh-Al-Po7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="233"/>
         </scene>
     </scenes>
 </document>

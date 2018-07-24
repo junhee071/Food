@@ -20,7 +20,6 @@ class StartingScreenController: UIViewController {
     
 
     @IBAction func searchButtonTapped(_ sender: UIButton) {
-        print("hello")
     }
     
     

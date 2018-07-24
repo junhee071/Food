@@ -7,7 +7,27 @@
 //
 
 import Foundation
+import UIKit
 
-class SearchViewController {
+class SearchViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: UITextField!
+    
+    @IBOutlet weak var FindExpirationDate: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ExpirationDateViewController {
+            let vc = segue.destination as? ExpirationDateViewController
+            vc?.foodName = searchBar.text!
+
+        }
+    }
+    
+    @IBAction func findExpirationDateButtonTapped(_ sender: UIButton) {
+        
+    }
 }
