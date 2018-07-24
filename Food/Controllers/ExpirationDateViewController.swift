@@ -6,6 +6,12 @@
 //  Copyright © 2018 Jun Hee Han. All rights reserved.
 //
 
+//TODO:
+//1. array(array of two dictinaries repeating)
+//go into array, check first dictionary's value. match it. then pull out second dictionaries value
+//get name of food and expiration date and put them into the view controller side by side
+
+
 import Foundation
 import UIKit
 
@@ -15,50 +21,23 @@ class ExpirationDateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-        print(foodName)
+        //access plist file as dictionary
+        if let fileUrl = Bundle.main.url(forResource: "output-onlinecsvtools", withExtension: "plist"),
+        let data = try? Data(contentsOf: fileUrl) {
+            if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [[String: Any]] { // [String: Any] which ever it is
+                print(result)
+            }
+        }
+    }
+        
+
+    override func didReceiveMemoryWarning() {
+         super.didReceiveMemoryWarning()
     }
     
-    //create dictionary from csv
-//    func readDataFromCSV(fileName:String, fileType: String)-> String!{
-//        guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
-//            else {
-//                return nil
-//        }
-//        do {
-//            var contents = try String(contentsOfFile: filepath, encoding: .utf8)
-//            contents = cleanRows(file: contents)
-//            return contents
-//        } catch {
-//            print("File Read Error for file \(filepath)")
-//            return nil
-//        }
-//    }
-//    
-//    
-//    func cleanRows(file:String)->String{
-//        var cleanFile = file
-//        cleanFile = cleanFile.replacingOccurrences(of: "\r", with: "\n")
-//        cleanFile = cleanFile.replacingOccurrences(of: "\n\n", with: "\n")
-//        //        cleanFile = cleanFile.replacingOccurrences(of: ";;", with: "")
-//        //        cleanFile = cleanFile.replacingOccurrences(of: ";\n", with: "")
-//        return cleanFile
-//    }
-//    
-//    func csv(data: String) -> [[String]] {
-//        var result: [[String]] = []
-//        let rows = data.components(separatedBy: "\n")
-//        for row in rows {
-//            let columns = row.components(separatedBy: ";")
-//            result.append(columns)
-//        }
-//        
-//        return result
-//    }
-//    
-//    var data = readDataFromCSV(fileName: Table 1-Table 1.csv, fileType: kCSVFileExtension)
-//    data = cleanRows(file: data!)
-//    let csvRows = csv(data: data!)
-//    print(csvRows[1][1])
+   
+    
 
 }

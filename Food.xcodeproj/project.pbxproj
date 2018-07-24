@@ -19,6 +19,7 @@
 		B869B6E821068A7F005B5EC5 /* SearchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B869B6E721068A7F005B5EC5 /* SearchScreen.storyboard */; };
 		B8C47D59210694420007CC31 /* ExpirationDateScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D58210694420007CC31 /* ExpirationDateScreen.storyboard */; };
 		B8C47D5B210694630007CC31 /* ExpirationDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D5A210694630007CC31 /* ExpirationDateViewController.swift */; };
+		B8C47D5F2106F45F0007CC31 /* output-onlinecsvtools.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B869B6E721068A7F005B5EC5 /* SearchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchScreen.storyboard; sourceTree = "<group>"; };
 		B8C47D58210694420007CC31 /* ExpirationDateScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpirationDateScreen.storyboard; sourceTree = "<group>"; };
 		B8C47D5A210694630007CC31 /* ExpirationDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDateViewController.swift; sourceTree = "<group>"; };
+		B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "output-onlinecsvtools.plist"; path = "../../../../Downloads/output-onlinecsvtools.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				B869B6C7210659C1005B5EC5 /* AppDelegate.swift */,
 				B869B6D1210659C2005B5EC5 /* Assets.xcassets */,
 				B869B6D6210659C2005B5EC5 /* Info.plist */,
+				B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */,
 				B869B6CE210659C1005B5EC5 /* Food.xcdatamodeld */,
 			);
 			path = Food;
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8C47D5F2106F45F0007CC31 /* output-onlinecsvtools.plist in Resources */,
 				B869B6E821068A7F005B5EC5 /* SearchScreen.storyboard in Resources */,
 				B869B6E021066A56005B5EC5 /* StartingScreen.storyboard in Resources */,
 				B869B6D5210659C2005B5EC5 /* LaunchScreen.storyboard in Resources */,
