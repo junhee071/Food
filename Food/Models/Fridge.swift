@@ -8,6 +8,13 @@
 
 import Foundation
 
+struct Food {
+    let name: String
+    
+    //in the form of days
+    let expiration: String
+}
+
 class Note {
     var food = ""
     var expirationTime = ""

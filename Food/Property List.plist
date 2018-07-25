@@ -1,0 +1,1866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Apple Juice (canned)</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Apples &amp; Applesauce (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Apricots (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Baby cereal Del Monte (oatmeal based)</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Baby cereal Del Monte (rice based)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Baby food (jarred)      Del Monte</string>
+		<key>expiration</key>
+		<string>0 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bacon   (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bacon Bits (imitation)</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bacon Oscar Meyer, Louis Rich</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bagels (frozen)</string>
+		<key>expiration</key>
+		<string>2 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bakers, Calumet, Certo,Everfresh Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bakery Mix Biscuit type</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Baking Powder</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>BBQ sauce</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beans (canned)</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beans, dried</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beans-canned (all types)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beans-dry (all types)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beans-vegetarian canned</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beef (canned)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beef (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beef patties (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beef roast (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Beef-ground (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Biscuit or pancake mix</string>
+		<key>expiration</key>
+		<string>15 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Blackberries/Blueberries (Frozen)</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bread dough (frozen)</string>
+		<key>expiration</key>
+		<string>0 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bread mixes</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Breakfast drink (shelf stable dairy product)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Burritos (frozen)</string>
+		<key>expiration</key>
+		<string>2 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Butter</string>
+		<key>expiration</key>
+		<string>3 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Butter &amp; Margarine (Fleischmann&apos;s Blue Bonnet &amp; Parkay)</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Butter &amp; Margarine, flavored spreads</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cakes &amp; brownie mixes</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cappucino  Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Capri Sun Kraft</string>
+		<key>expiration</key>
+		<string>18 days (dry mix) 60 days (bottles or pouches)</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Carmel Corn w/ nuts</string>
+		<key>expiration</key>
+		<string>90 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Carrots (canned)</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Carrots (canned)</string>
+		<key>expiration</key>
+		<string>30 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Catsup</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cereal - All types</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cereal (2 lb or greater plastic bags) Kellogg</string>
+		<key>expiration</key>
+		<string>15 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cereal (family-sized) Kellogg</string>
+		<key>expiration</key>
+		<string>90 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cereal (small boxes (2.0 oz or less)) Kellogg</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cereal, cook before eating</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cereal, ready-to-eat</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cereals (Post brand)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheese (American, Cheddar, Mozzarella)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheese (hard)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheese (Natural &amp; Processed</string>
+		<key>expiration</key>
+		<string>45 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheese- cottage</string>
+		<key>expiration</key>
+		<string>1 week</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheese- Grated (Kraft)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheese Sauces #10 cans &amp; 9 oz cans</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheese- sliced, &amp; Pollio</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheese Whiz Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cheesecake (KraftO</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cherries (frozen)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken (canned)</string>
+		<key>expiration</key>
+		<string>2-5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken- fried (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken- ground (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken nuggets (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken parts (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken- parts (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken thighs (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken- whole (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken-Cut up (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chicken-diced (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chili Sauce</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chocolate</string>
+		<key>expiration</key>
+		<string>18-24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chocolate syrup</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Citrus products (guava, kiwi-strawberry) Ocean Spray</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cocktail sauce</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cocoa &amp; cocoa mixes</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Coffee (ground in cans)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Coffee (instant)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Coffee (starbucks) Kraft</string>
+		<key>expiration</key>
+		<string>365</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Coffee Creamer (liquid/non-dairy</string>
+		<key>expiration</key>
+		<string>9 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Coffee Kraft brands   (see remarks)</string>
+		<key>expiration</key>
+		<string>180 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cooked fish (frozen)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cookies</string>
+		<key>expiration</key>
+		<string>8 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cookies (Bakery type)</string>
+		<key>expiration</key>
+		<string>2 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cookies Keebler</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cooking oil</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cooking oil- spray</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Corn (canned)</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Corn (cream)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Corn Flake Crumbs &amp; Croutettes  Kellogg</string>
+		<key>expiration</key>
+		<string>27 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Corned beef (with pickling juices) (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cornmeal</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cornmeal</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cornstarch</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Corn-whole kernel (canned)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Country Time Kraft</string>
+		<key>expiration</key>
+		<string>18 days (dry mix) 60 days (bottles or pouches)</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cracker Jacks</string>
+		<key>expiration</key>
+		<string>90 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Crackers</string>
+		<key>expiration</key>
+		<string>8 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Crackers (Handi Snack, Snack Box)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Crackers Keebler</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Craisins</string>
+		<key>expiration</key>
+		<string>120 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cranberry and other sauces Ocean Spray</string>
+		<key>expiration</key>
+		<string>90 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Crayfish (frozen)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cream Cheese, Natural Cheese (Chunks/bars) Churney Cheese, Kraft</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cream of Wheat, Cream of Rice Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dates (frozen)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dijonnaise Hellmann&apos;s</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dream Whip (Kraft)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dressings (Taste of Life, Seven Seas, Good Seasons) Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dry packaged desserts (Jell-o, No bake) Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dry soups/bullion/dips Knorr only</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Duck- whole (frozen)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Egg beaters (Fleischmann&apos;s</string>
+		<key>expiration</key>
+		<string>0 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Egg mix (dried)</string>
+		<key>expiration</key>
+		<string>15 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Egg substitues (frozen)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Eggo waffles &amp; pancakes</string>
+		<key>expiration</key>
+		<string>15 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Figs-dried</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fish (canned)</string>
+		<key>expiration</key>
+		<string>2-5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fish nuggets (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fish-breaded (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fish-raw (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Flour - All types</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Flour- Wheat</string>
+		<key>expiration</key>
+		<string>1 month</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Flour- White</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Frosting- canned</string>
+		<key>expiration</key>
+		<string>10 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Frosting mixes</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Frozen toppings Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fruit Snacks</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fruits - canned</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fruits- dried</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fruits-berries, melons (frozen)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Garlic, chopped (jars)</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gatorade</string>
+		<key>expiration</key>
+		<string>9 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gelatin, flavored</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gelatin, unflavored</string>
+		<key>expiration</key>
+		<string>3 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Giblets (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Goose- whole (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Grape Juices (canned)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Grapefruit Juice (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gravy- dry mixes</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Green Beans (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Grits-Corn</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ground meat  (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Guacamole</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Gummy Bears</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ham-- Honey-Baked John Morrell</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ham, whole cooked (Frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ham-boneless (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ham-canned (refrigerated)</string>
+		<key>expiration</key>
+		<string>9 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Herbs- dried</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Horseradish &amp; Chutney sauces</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hot Chocolate, Cappucino Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hot Dogs (Oscar Meyer, Louis Rich)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hot Dogs (sealed in package) (Frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ice cream</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ice cream cones Keebler</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ice Cream Cones Keebler</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Infant Formula</string>
+		<key>expiration</key>
+		<string>0 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Jello (ready to eat)</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Jelly &amp; Jams</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Juice- Knudsen Sparkling</string>
+		<key>expiration</key>
+		<string>2 yrs</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Juices - canned</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Juicy Juice (cans)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Juicy Juice (little boxes)</string>
+		<key>expiration</key>
+		<string>3 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>JuicyJuice (bottles)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ketchup</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Kraft Meals (Lunchbreaks)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lamb  (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lemon Juice (frozen concentrate)</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lentils, dried</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Liquid Marinade and Stir Fry, Lawry</string>
+		<key>expiration</key>
+		<string>1 year</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Liver, tongue, chitterlings (Variety meats)  (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lobster tails</string>
+		<key>expiration</key>
+		<string>3 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lunch Meats (sealed in package) (Frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lunchables (Oscar Mayer)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Luncheon meat (canned)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>M&amp;M and Mars</string>
+		<key>expiration</key>
+		<string>4 weeks</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mac n&apos; cheese &amp; Liquid Dinners Kraft Dinners</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Macaroni/Spaghetti</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Margarine</string>
+		<key>expiration</key>
+		<string>5 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Marshmallows</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mayo, Miracle Whip, Sauceworks Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mayonnaise</string>
+		<key>expiration</key>
+		<string>3 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mayonnaise Hellmann&apos;s</string>
+		<key>expiration</key>
+		<string>3 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Meat (canned)</string>
+		<key>expiration</key>
+		<string>2-5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Meats (sandwich &amp; deli type) Oscar Meyer, Louis Rich</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Milk half &amp; half</string>
+		<key>expiration</key>
+		<string>0 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Milk, canned evaporated</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Minute Rice (Kraft)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Minute Rice Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Molasses</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mushrooms, dried</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mustard</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Nuts, jars or cans</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Oats Rolled</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Olive Oil Bertelli</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Olives, black &amp; green</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Orange Juice (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Oysters (frozen)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pancakes/waffles (frozen)</string>
+		<key>expiration</key>
+		<string>2 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pasta &amp; Sauce (DiGiorno)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pasta (canned)</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pasta- dry packaged</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pasta Salads  Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pasta Sauce Bertelli &amp; Ragu</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peaches (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peanut Butter</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peanut Butter Skippy, in plastic containers</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peanut Butter Stix Skippy</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peanuts (shelled)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pears (canned)</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peas (canned)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peas (canned)</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peas (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peas-Blackeyed (canned)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peas-canned &amp; split dry</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Phillie snack bars</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pickles (Claussen)</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pickles, Sauerbraut- canned</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pie Crust Keebler</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pie crusts &amp; cones Keebler</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pineapple (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pineapple Juice (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Plums (canned)</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Popcorn (dry in jar)</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Popcorn (microwave)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pork  (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pork (canned)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Potato chips</string>
+		<key>expiration</key>
+		<string>2 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Potatoes (canned)</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Potatoes (dehydrated can)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Potatoes (dehydrated package)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Potatoes (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Potatoes, instant</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Poultry- cooked (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>YooHoo drinks</string>
+		<key>expiration</key>
+		<string>see comments</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Prunes (dried)</string>
+		<key>expiration</key>
+		<string>9 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pudding (Kraft)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pudding mixes</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pudding/Gelatin (Handi Snack Desserts) Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Raisins</string>
+		<key>expiration</key>
+		<string>9 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Refried Beans (Kraft)</string>
+		<key>expiration</key>
+		<string>120 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Refrigerated Drinks- Assorted  (glass) Ocean Spray</string>
+		<key>expiration</key>
+		<string>90 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Refrigerated Drinks- Citrus  (plastic bottles) Ocean Spray</string>
+		<key>expiration</key>
+		<string>30 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Refrigerated juices (Tropicana)</string>
+		<key>expiration</key>
+		<string>7 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Refrigerated Non-citrus drinks- Assorted  (plastic &amp; can) Ocean Spray</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rice, brown</string>
+		<key>expiration</key>
+		<string>1 year</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rice, flavored or herb</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rice, white or wild</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rotisserie chicken (frozen)</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Salad dressings (bottled)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Salad dressings (bottled) Wish-Bone</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Salmon Pink (canned)</string>
+		<key>expiration</key>
+		<string>36 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Salsa</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Salsa, picante, taco sauces</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sauces (Bull&apos;s Eye, BBQ) Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sauces (cream with milk)</string>
+		<key>expiration</key>
+		<string>1 year</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sauces, Hellmann&apos;s</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sausage- patties &amp; smoked links (frozen</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sausage- raw (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sausages (frozen</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Scallops (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Seasonings, dry Adolph&apos;s</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Seasonings, liquid Adolph&apos;s</string>
+		<key>expiration</key>
+		<string>1 year</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Shortening</string>
+		<key>expiration</key>
+		<string>8 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Shrimp</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Side dishes/deli salads Country Crock</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Snack Bars Skippy</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soda- carbonated canned</string>
+		<key>expiration</key>
+		<string>9 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soup - aseptic-pack Knorr</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soup mixes</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soups (canned)</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soups (Del Monte private label soups)</string>
+		<key>expiration</key>
+		<string>12 months*</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soups and Liquid broths Knorr only</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soups dry mix  Lipton</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Soy milk</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Spaghetti sauce mix</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Spices</string>
+		<key>expiration</key>
+		<string>3 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Spices red pepper, chili powder</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Spinach (canned)</string>
+		<key>expiration</key>
+		<string>5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Spreads, Refrigerated Promise</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sqeeze-It Skippy</string>
+		<key>expiration</key>
+		<string>18 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Steaks &amp; Roasts  (frozen)</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Stew (canned)</string>
+		<key>expiration</key>
+		<string>2-5 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Stove Top Classics</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Stove Top Stuffing</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sugar substitutes</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sugar, brown</string>
+		<key>expiration</key>
+		<string>4 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sugar, granulated</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sure Jell</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sweet potatoes (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Syrup- Maple</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Taco Bell Kits, shells, tortillas Kraft</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Taco Bell red sauces, salsa con queso, seasonings Kraft</string>
+		<key>expiration</key>
+		<string>120 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Taco sauce mix</string>
+		<key>expiration</key>
+		<string>2 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tang drink &amp; Health Quenchers   Kraft</string>
+		<key>expiration</key>
+		<string>18 days (dry mix) 60 days (bottles or pouches)</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tapioca (Kraft)</string>
+		<key>expiration</key>
+		<string>60 days</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tea Instant</string>
+		<key>expiration</key>
+		<string>3 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tea Instant mixes Lipton</string>
+		<key>expiration</key>
+		<string>3 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Toaster pastries (fruit filled)</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tomato paste</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tomatoes (canned)</string>
+		<key>expiration</key>
+		<string>24 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Turkey ground (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Turkey Roasts (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Turkey Whole (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Turkey-parts (frozen)</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>TV dinners</string>
+		<key>expiration</key>
+		<string>3 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Vanilla, lemon, all extracts</string>
+		<key>expiration</key>
+		<string>3 years</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Wheat Quick Rolled</string>
+		<key>expiration</key>
+		<string>12 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Whipped topping</string>
+		<key>expiration</key>
+		<string>6 months</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Worcestershire sauce</string>
+		<key>expiration</key>
+		<string>1 year</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Yogurt &amp; Yoplait General Mills</string>
+		<key>expiration</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Yogurt, Sour Cream, Cottage Cheese, Dips- Sour cream based Kraft</string>
+		<key>expiration</key>
+		<string>15 days</string>
+	</dict>
+</array>
+</plist>

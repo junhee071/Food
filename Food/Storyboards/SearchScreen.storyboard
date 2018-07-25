@@ -26,12 +26,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRD-JF-rOx">
-                                <rect key="frame" x="164" y="275" width="46" height="30"/>
+                                <rect key="frame" x="168" y="273" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="findExpirationDateButtonTapped:" destination="OhO-4r-csD" eventType="touchUpInside" id="ZIm-Zp-SzA"/>
-                                    <segue destination="Rt3-PM-Ox5" kind="show" id="oM3-yA-GHn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,14 +50,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gks-jj-k8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-50.399999999999999" y="172.26386806596702"/>
-        </scene>
-        <!--ExpirationDateTableViewController-->
-        <scene sceneID="SDy-fh-bMx">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ExpirationDateScreen" referencedIdentifier="ExpirationDateTableViewController" id="Rt3-PM-Ox5" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bbh-Al-Po7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="404" y="233"/>
         </scene>
     </scenes>
 </document>

@@ -16,17 +16,39 @@ import Foundation
 import UIKit
 
 
-class ExpirationDateTableViewController: UITableViewController {
+class ExpirationDateTableViewController: UITableViewController, SearchViewControllerDelegate {
     
-  
+    func search(_ viewController: SearchViewController, didSelectANew food: Food) {
+        fridge.insert(food, at: 0)
+        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+//        tableView.reloadData()
+    }
+    
+    
+    var fridge: [Food] = []
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let idenetifier = segue.identifier {
+            switch idenetifier {
+            case "show search view controller":
+                guard let otherViewController = segue.destination as? SearchViewController else {
+                    return assertionFailure("storybaord not setup correctly")
+                }
+                
+                otherViewController.delegate = self
+            default:
+                break
+            }
+        }
+    }
    
     
-    var foodName:String = ""
+//    var foodName:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(foodName)
+//        print(foodName)
 //        //access plist file as dictionary
 //        if let fileUrl = Bundle.main.url(forResource: "output-onlinecsvtools", withExtension: "plist"),
 //        let data = try? Data(contentsOf: fileUrl) {
@@ -64,10 +86,21 @@ class ExpirationDateTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return fridge.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if let foodInfo = data[foodName] {
+//            let nOfDays = foodInfo.expirationTime
+//            nOfDays
+//
+//        } else {
+//            //no food was found
+//        }
+//
+//        let
+//        let expirationDate = Date(timeIntervalSinceNow: 60*60*24*nOfDaysUntilExpires)
+//
         let data = obtainDatabase()
         var food: String = ""
         var expiration: String = ""
@@ -83,8 +116,12 @@ class ExpirationDateTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "expirationTableViewCell", for: indexPath) as! ExpirationDateTableViewCell
         
-        cell.foodNameLabel.text = food
-        cell.expirationTimeLabel.text = expiration
+        
+        let foodForTheCurrentIndexPath = fridge[indexPath.row]
+        
+        cell.foodNameLabel.text = foodForTheCurrentIndexPath.name
+        cell.expirationTimeLabel.text = foodForTheCurrentIndexPath.expiration
+        
         return cell
     }
     

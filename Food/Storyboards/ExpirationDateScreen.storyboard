@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8PB-bc-D23">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="My Food" id="r54-qH-BBD">
                         <barButtonItem key="leftBarButtonItem" title="Manual Search" id="oZH-MR-YfK">
                             <connections>
-                                <segue destination="SIs-Rw-ygS" kind="show" id="XC4-98-SZj"/>
+                                <segue destination="SIs-Rw-ygS" kind="show" identifier="show search view controller" id="XC4-98-SZj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
