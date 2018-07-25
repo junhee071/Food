@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct Food {
+struct Food: Decodable {
     let name: String
     
     //in the form of days
     let expiration: String
 }
 
-class Note {
-    var food = ""
-    var expirationTime = ""
-}
+//class Note {
+//    var food = ""
+//    var expirationTime = ""
+//}

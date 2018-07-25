@@ -22,7 +22,7 @@
 		B8C47D5F2106F45F0007CC31 /* output-onlinecsvtools.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */; };
 		B8C47D632107BD460007CC31 /* ExpirationDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D622107BD460007CC31 /* ExpirationDateTableViewCell.swift */; };
 		B8C47D662107CDF40007CC31 /* Fridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D652107CDF40007CC31 /* Fridge.swift */; };
-		B8C47D682107E4460007CC31 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D672107E4460007CC31 /* Property List.plist */; };
+		B8C47D682107E4460007CC31 /* PropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D672107E4460007CC31 /* PropertyList.plist */; };
 		B8C47D6A2107F2590007CC31 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D692107F2590007CC31 /* DatabaseHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "output-onlinecsvtools.plist"; path = "../../../../Downloads/output-onlinecsvtools.plist"; sourceTree = "<group>"; };
 		B8C47D622107BD460007CC31 /* ExpirationDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDateTableViewCell.swift; sourceTree = "<group>"; };
 		B8C47D652107CDF40007CC31 /* Fridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fridge.swift; sourceTree = "<group>"; };
-		B8C47D672107E4460007CC31 /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		B8C47D672107E4460007CC31 /* PropertyList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PropertyList.plist; sourceTree = "<group>"; };
 		B8C47D692107F2590007CC31 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +85,7 @@
 				B869B6D1210659C2005B5EC5 /* Assets.xcassets */,
 				B869B6D6210659C2005B5EC5 /* Info.plist */,
 				B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */,
-				B8C47D672107E4460007CC31 /* Property List.plist */,
+				B8C47D672107E4460007CC31 /* PropertyList.plist */,
 				B869B6CE210659C1005B5EC5 /* Food.xcdatamodeld */,
 				B8C47D612107BD190007CC31 /* Views */,
 			);
@@ -196,7 +196,7 @@
 				B869B6D5210659C2005B5EC5 /* LaunchScreen.storyboard in Resources */,
 				B869B6D2210659C2005B5EC5 /* Assets.xcassets in Resources */,
 				B869B6CD210659C1005B5EC5 /* Main.storyboard in Resources */,
-				B8C47D682107E4460007CC31 /* Property List.plist in Resources */,
+				B8C47D682107E4460007CC31 /* PropertyList.plist in Resources */,
 				B8C47D59210694420007CC31 /* ExpirationDateScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

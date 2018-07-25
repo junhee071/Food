@@ -21,18 +21,17 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     func search(_ viewController: SearchViewController, didSelectANew food: Food) {
         fridge.insert(food, at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-//        tableView.reloadData()
     }
     
     
     var fridge: [Food] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let idenetifier = segue.identifier {
-            switch idenetifier {
+        if let identifier = segue.identifier {
+            switch identifier {
             case "show search view controller":
                 guard let otherViewController = segue.destination as? SearchViewController else {
-                    return assertionFailure("storybaord not setup correctly")
+                    return assertionFailure("storyboard not setup correctly")
                 }
                 
                 otherViewController.delegate = self
@@ -74,16 +73,16 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     }
     
     
-    func obtainDatabase() -> [[String: Any]] {
-        //access plist file as dictionary
-        if let fileUrl = Bundle.main.url(forResource: "output-onlinecsvtools", withExtension: "plist"),
-        let data = try? Data(contentsOf: fileUrl) {
-        if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String: Any]] { // [String: Any] which ever it is
-            return result
-        }
-        }
-        return [[:]]
-    }
+//    func obtainDatabase() -> [[String: Any]] {
+//        //access plist file as dictionary
+//        if let fileUrl = Bundle.main.url(forResource: "output-onlinecsvtools", withExtension: "plist"),
+//        let data = try? Data(contentsOf: fileUrl) {
+//        if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String: Any]] { // [String: Any] which ever it is
+//            return result
+//        }
+//        }
+//        return [[:]]
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fridge.count
@@ -101,16 +100,16 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 //        let
 //        let expirationDate = Date(timeIntervalSinceNow: 60*60*24*nOfDaysUntilExpires)
 //
-        let data = obtainDatabase()
-        var food: String = ""
-        var expiration: String = ""
-        for arr in data {
-            food = arr["Product"] as! String
-            if food == foodName {
-                expiration = arr["Extension period"] as! String
-                break
-            }
-        }
+//        let data = obtainDatabase()
+//        var food: String = ""
+//        var expiration: String = ""
+//        for arr in data {
+//            food = arr["Product"] as! String
+//            if food == foodName {
+//                expiration = arr["Extension period"] as! String
+//                break
+//            }
+//        }
         
         
         
@@ -123,6 +122,14 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         cell.expirationTimeLabel.text = foodForTheCurrentIndexPath.expiration
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            self.fridge.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
     
