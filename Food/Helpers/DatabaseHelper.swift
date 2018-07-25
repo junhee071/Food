@@ -25,19 +25,42 @@ struct DatabaseHelper {
     }
     
     static func obtainDatabase() -> [Food] {
-        //access plist file as dictionary
         
+        
+        //load the file from the plist
         if let fileUrl = Bundle.main.url(forResource: "PropertyList", withExtension: "plist"),
             let data = try? Data(contentsOf: fileUrl) {
-            if let loadedFoodItems = try? PropertyListDecoder().decode([Food].self, from: data) {
+            
+            //-------------------------------
+            //decode the file into swift models
+            if let loadedFoodItems = try? PropertyListDecoder().decode([FoodPlist].self, from: data) {
+                var foodItems: [Food] = []
                 
+                //create core data instances for the swift models that came from the plist file
+                for foodItem in loadedFoodItems {
+                    let newFoodCoreDataItem = CoreDataHelper.newFood()
+                    newFoodCoreDataItem.name = foodItem.name
+                    newFoodCoreDataItem.expiration = foodItem.expiration
+                    foodItems.append(newFoodCoreDataItem)
+                }
                 
-//                if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String: Any]] { // [String: Any] which ever it is
-                return loadedFoodItems
+                CoreDataHelper.saveFood()
+                
+                return foodItems
             }
+            
+            
+            
+            
+//            if let loadedFoodItems = try? JSONDecoder().decode([Food].self, from: data){
+//                if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String: Any]] { // [String: Any] which ever it is
+//                   return loadedFoodItems
+//                }
+//            }
         }
+        
         return []
-    }
-    
-}
 
+    }
+
+}

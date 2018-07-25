@@ -24,6 +24,9 @@
 		B8C47D6A2107F2590007CC31 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D692107F2590007CC31 /* DatabaseHelper.swift */; };
 		B8C47D6D2108DFC10007CC31 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D6C2108DFC10007CC31 /* CoreDataHelper.swift */; };
 		B8C47D702108E76E0007CC31 /* Food.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D6E2108E76E0007CC31 /* Food.xcdatamodeld */; };
+		B8C47D73210911570007CC31 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D71210911570007CC31 /* Food+CoreDataClass.swift */; };
+		B8C47D74210911570007CC31 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D72210911570007CC31 /* Food+CoreDataProperties.swift */; };
+		B8C47D7621091C2D0007CC31 /* FoodPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D7521091C2D0007CC31 /* FoodPlist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		B8C47D692107F2590007CC31 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		B8C47D6C2108DFC10007CC31 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		B8C47D6F2108E76E0007CC31 /* Food.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food.xcdatamodel; sourceTree = "<group>"; };
+		B8C47D71210911570007CC31 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B8C47D72210911570007CC31 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B8C47D7521091C2D0007CC31 /* FoodPlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPlist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 		B8C47D642107CDDF0007CC31 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B8C47D71210911570007CC31 /* Food+CoreDataClass.swift */,
+				B8C47D72210911570007CC31 /* Food+CoreDataProperties.swift */,
+				B8C47D7521091C2D0007CC31 /* FoodPlist.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,10 +230,13 @@
 				B869B6E4210689E1005B5EC5 /* SearchViewController.swift in Sources */,
 				B869B6CA210659C1005B5EC5 /* ViewController.swift in Sources */,
 				B869B6E221067A23005B5EC5 /* StartingScreenController.swift in Sources */,
+				B8C47D73210911570007CC31 /* Food+CoreDataClass.swift in Sources */,
+				B8C47D7621091C2D0007CC31 /* FoodPlist.swift in Sources */,
 				B869B6C8210659C1005B5EC5 /* AppDelegate.swift in Sources */,
 				B8C47D5B210694630007CC31 /* ExpirationDateViewController.swift in Sources */,
 				B8C47D632107BD460007CC31 /* ExpirationDateTableViewCell.swift in Sources */,
 				B8C47D702108E76E0007CC31 /* Food.xcdatamodeld in Sources */,
+				B8C47D74210911570007CC31 /* Food+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

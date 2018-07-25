@@ -47,6 +47,7 @@ class SearchViewController: UIViewController {
 
         
         if let foundFood = food {
+            //create timer save to coreData
             
             //notift tghe delegate what food was selected by the user
             delegate?.search(self, didSelectANew: foundFood)

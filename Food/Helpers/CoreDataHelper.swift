@@ -54,4 +54,10 @@ struct CoreDataHelper {
             return []
         }
     }
+    
+    //function take in string, return single core data food object
+    
+    static func addFood(food: String) -> [Food] {
+        
+    }
 }
