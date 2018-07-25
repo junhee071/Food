@@ -35,6 +35,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
                 }
                 
                 otherViewController.delegate = self
+                CoreDataHelper.saveFood()
             default:
                 break
             }
@@ -46,6 +47,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fridge = CoreDataHelper.retrieveFood()
 
 //        print(foodName)
 //        //access plist file as dictionary
@@ -126,9 +129,12 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let foodToDelete = fridge[indexPath.row]
+            CoreDataHelper.delete(food: foodToDelete)
             
-            self.fridge.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            fridge = CoreDataHelper.retrieveFood()
+//            self.fridge.remove(at: indexPath.row)
+//            self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     

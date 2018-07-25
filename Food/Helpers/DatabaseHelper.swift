@@ -26,9 +26,11 @@ struct DatabaseHelper {
     
     static func obtainDatabase() -> [Food] {
         //access plist file as dictionary
+        
         if let fileUrl = Bundle.main.url(forResource: "PropertyList", withExtension: "plist"),
             let data = try? Data(contentsOf: fileUrl) {
             if let loadedFoodItems = try? PropertyListDecoder().decode([Food].self, from: data) {
+                
                 
 //                if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String: Any]] { // [String: Any] which ever it is
                 return loadedFoodItems
