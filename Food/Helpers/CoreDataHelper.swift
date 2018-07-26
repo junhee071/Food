@@ -42,9 +42,14 @@ struct CoreDataHelper {
         saveFood()
     }
     
-    static func retrieveFood() -> [Food] {
+    static func retrieveFood(predicate: NSPredicate?) -> [Food] {
         do {
+            
             let fetchRequest = NSFetchRequest<Food>(entityName: "Food")
+            if let predicate = predicate {
+                fetchRequest.predicate = predicate
+            }
+            
             let results = try context.fetch(fetchRequest)
             
             return results
@@ -55,9 +60,23 @@ struct CoreDataHelper {
         }
     }
     
+    //testing this
+    static func retrieveFoodAgain() -> [Food] {
+        do {
+            let fetchRequest: NSFetchRequest<Food> = NSFetchRequest<Food>(entityName: "Food")
+            let results = try context.fetch(fetchRequest as! NSFetchRequest<NSFetchRequestResult>)
+            return results as! [Food]
+        } catch let error {
+            print("Could not fetch \(error.localizedDescription)")
+            
+            return []
+        }
+    }
+    
     //function take in string, return single core data food object
     
-    static func addFood(food: String) -> [Food] {
-        
-    }
+    static func addTimer(food: String) -> FridgeItems
+{
+        let food = NSEntityDescription.insertNewObject(forEntityName: "FridgeItems", into: context) as! FridgeItems
+        return food    }
 }

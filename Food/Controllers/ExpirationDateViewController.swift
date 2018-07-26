@@ -19,8 +19,10 @@ import UIKit
 class ExpirationDateTableViewController: UITableViewController, SearchViewControllerDelegate {
     
     func search(_ viewController: SearchViewController, didSelectANew food: Food) {
-        fridge.insert(food, at: 0)
-        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        fridge.append(food)
+//        fridge.insert(food, at: 0)
+//        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        tableView.reloadData()
     }
     
     
@@ -47,8 +49,9 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fridge = CoreDataHelper.retrieveFood()
+        let num = 245
+        print("The number is \(num)")
+        fridge = []
 
 //        print(foodName)
 //        //access plist file as dictionary
@@ -132,7 +135,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
             let foodToDelete = fridge[indexPath.row]
             CoreDataHelper.delete(food: foodToDelete)
             
-            fridge = CoreDataHelper.retrieveFood()
+            fridge = CoreDataHelper.retrieveFood(predicate: nil)
+            tableView.reloadData()
 //            self.fridge.remove(at: indexPath.row)
 //            self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }

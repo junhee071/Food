@@ -7,9 +7,44 @@
 //
 
 import Foundation
+import CoreData
+import UIKit
 
 struct DatabaseHelper {
+    static let context: NSManagedObjectContext = {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError()
+        }
+        
+        let persistentContainer = appDelegate.persistentContainer
+        let context = persistentContainer.viewContext
+        
+        return context
+    }()
+    
     static func populateDataBaseWithDefaultFoodData() {
+        //load the file from the plist
+        if let fileUrl = Bundle.main.url(forResource: "PropertyList", withExtension: "plist"),
+            let data = try? Data(contentsOf: fileUrl) {
+            
+            //-------------------------------
+            //decode the file into swift models
+            if let loadedFoodItems = try? PropertyListDecoder().decode([FoodPlist].self, from: data) {
+                
+                //create core data instances for the swift models that came from the plist file
+                for foodItem in loadedFoodItems {
+                    let newFoodCoreDataItem = CoreDataHelper.newFood()
+                    newFoodCoreDataItem.name = foodItem.name
+                    newFoodCoreDataItem.expiration = foodItem.expiration
+                }
+                CoreDataHelper.saveFood()
+                
+               
+            }
+            
+            
+        
+        }
         
         //set up data base with items plist into database
         //get the food objects from the plist
@@ -24,43 +59,65 @@ struct DatabaseHelper {
         //save the new chagnes
     }
     
-    static func obtainDatabase() -> [Food] {
-        
-        
-        //load the file from the plist
-        if let fileUrl = Bundle.main.url(forResource: "PropertyList", withExtension: "plist"),
-            let data = try? Data(contentsOf: fileUrl) {
-            
-            //-------------------------------
-            //decode the file into swift models
-            if let loadedFoodItems = try? PropertyListDecoder().decode([FoodPlist].self, from: data) {
-                var foodItems: [Food] = []
-                
-                //create core data instances for the swift models that came from the plist file
-                for foodItem in loadedFoodItems {
-                    let newFoodCoreDataItem = CoreDataHelper.newFood()
-                    newFoodCoreDataItem.name = foodItem.name
-                    newFoodCoreDataItem.expiration = foodItem.expiration
-                    foodItems.append(newFoodCoreDataItem)
-                }
-                
-                CoreDataHelper.saveFood()
-                
-                return foodItems
+    
+    //return food object if food name in our database matches user's searchterm
+    static func getFood(for searchTerm: String) -> Food? {
+        //use fetch and predicates for coredata
+        var holder: Food
+        do {
+            let predicate = NSPredicate(format: "name == %@", searchTerm)
+            let fetchedResults = CoreDataHelper.retrieveFood(predicate: predicate)
+//            let fetchRequest: NSFetchRequest<Food> = CoreDataHelper.retrieveFood() as! NSFetchRequest<Food>
+//            fetchRequest.predicate = NSPredicate(format: "name == %@", searchTerm)
+//            let fetchedResults = try context.fetch(fetchRequest) as! [Food]
+            if fetchedResults[0].name == searchTerm{
+                holder = fetchedResults[0]
+                return holder
+            } else {
+                return nil
             }
-            
-            
-            
-            
-//            if let loadedFoodItems = try? JSONDecoder().decode([Food].self, from: data){
-//                if let result = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [[String: Any]] { // [String: Any] which ever it is
-//                   return loadedFoodItems
-//                }
-//            }
         }
-        
-        return []
 
+        catch  {
+            print("Fetch task failed")
+        }
     }
-
+    
 }
+    
+    
+    
+//        let fetchRequest = NSFetchRequest<Food>(entityName: "Food")
+//        let predicate = NSPredicate(format: "SELF.name contains %@", searchTerm)
+//        var arr: Food? = nil
+//        var theName: String
+//        for item in hi {
+//            if item.name == searchTerm {
+//                let newFoodCoreDataItem = CoreDataHelper.newFood()
+//                newFoodCoreDataItem.name = tem.name
+//                newFoodCoreDataItem.expiration = foodItem.expiration
+//                arr = item
+//                theName = item.name
+//            }
+//        }
+    
+        
+        
+//        let match = item.filter { $0.contains(searchTerm) }
+//        arr = match
+//        return arr!
+//    }
+//
+//
+//    }
+    
+
+    
+
+
+
+
+
+    
+
+

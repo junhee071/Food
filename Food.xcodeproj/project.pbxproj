@@ -84,11 +84,11 @@
 		B869B6C6210659C1005B5EC5 /* Food */ = {
 			isa = PBXGroup;
 			children = (
+				B869B6C7210659C1005B5EC5 /* AppDelegate.swift */,
 				B8C47D6B2108DFA80007CC31 /* Helpers */,
 				B8C47D642107CDDF0007CC31 /* Models */,
 				B869B6DE21066938005B5EC5 /* Controllers */,
 				B869B6DC210668A5005B5EC5 /* Storyboards */,
-				B869B6C7210659C1005B5EC5 /* AppDelegate.swift */,
 				B869B6D1210659C2005B5EC5 /* Assets.xcassets */,
 				B869B6D6210659C2005B5EC5 /* Info.plist */,
 				B8C47D5E2106F45F0007CC31 /* output-onlinecsvtools.plist */,

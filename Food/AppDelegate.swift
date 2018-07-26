@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         DatabaseHelper.populateDataBaseWithDefaultFoodData()
         
-        print(DatabaseHelper.obtainDatabase())
+        
         
         return true
     }

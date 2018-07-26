@@ -21,6 +21,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var FindExpirationDate: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,17 +35,12 @@ class SearchViewController: UIViewController {
 //    }
     
     @IBAction func findExpirationDateButtonTapped(_ sender: UIButton) {
-        let data = DatabaseHelper.obtainDatabase()
+//        let data = DatabaseHelper.obtainDatabase()
         var food: Food? = nil
         
-        //searching based off user input
-        for arr in data {
-            if arr.name == searchBar.text {
-                food = arr
-                break
-            }
-        }
-
+        //call the getFood() function in databasehelper
+        food = DatabaseHelper.getFood(for: searchBar.text!)
+   
         
         if let foundFood = food {
             //create timer save to coreData
