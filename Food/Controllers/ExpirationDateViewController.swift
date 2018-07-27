@@ -25,13 +25,20 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         tableView.reloadData()
     }
     
+    @IBAction func manualSearchPressed(_ sender: Any) {
+        
+        let searchStoryboard = UIStoryboard(name: "SearchScreen", bundle: nil)
+        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+        self.navigationController?.pushViewController(searchVC!, animated: true)
+
+    }
     
     var fridge: [Food] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             switch identifier {
-            case "show search view controller":
+            case "showsearchviewcontroller":
                 guard let otherViewController = segue.destination as? SearchViewController else {
                     return assertionFailure("storyboard not setup correctly")
                 }

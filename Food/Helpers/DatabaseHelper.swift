@@ -11,6 +11,11 @@ import CoreData
 import UIKit
 
 struct DatabaseHelper {
+    
+    static var count: Int = 0
+    static let userDefaults = UserDefaults.standard
+    
+    
     static let context: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError()
@@ -24,28 +29,39 @@ struct DatabaseHelper {
     
     static func populateDataBaseWithDefaultFoodData() {
         //load the file from the plist
-        if let fileUrl = Bundle.main.url(forResource: "PropertyList", withExtension: "plist"),
-            let data = try? Data(contentsOf: fileUrl) {
+        if let theCount = userDefaults.value(forKey: "Count") {
+            count = theCount as! Int
             
-            //-------------------------------
-            //decode the file into swift models
-            if let loadedFoodItems = try? PropertyListDecoder().decode([FoodPlist].self, from: data) {
-                
-                //create core data instances for the swift models that came from the plist file
-                for foodItem in loadedFoodItems {
-                    let newFoodCoreDataItem = CoreDataHelper.newFood()
-                    newFoodCoreDataItem.name = foodItem.name
-                    newFoodCoreDataItem.expiration = foodItem.expiration
-                }
-                CoreDataHelper.saveFood()
-                
-               
-            }
-            
-            
-        
         }
-        
+        else {
+                if let fileUrl = Bundle.main.url(forResource: "PropertyList", withExtension: "plist"),
+                    let data = try? Data(contentsOf: fileUrl) {
+                    
+                    //-------------------------------
+                    //decode the file into swift models
+                    if let loadedFoodItems = try? PropertyListDecoder().decode([FoodPlist].self, from: data) {
+                        
+                        //create core data instances for the swift models that came from the plist file
+                        for foodItem in loadedFoodItems {
+                            let newFoodCoreDataItem = CoreDataHelper.newFood()
+                            newFoodCoreDataItem.name = foodItem.name
+                            newFoodCoreDataItem.expiration = foodItem.expiration
+                        }
+                        CoreDataHelper.saveFood()
+                        count = count + 1
+                        userDefaults.set(count, forKey: "Count")
+                    }
+                    
+                }
+        }
+    }
+    
+//    static func populate() {
+//        let newFoodCoreDataItem = CoreDataHelper.newFood()
+//       newFoodCoreDataItem.name = "Apple"
+//        newFoodCoreDataItem.expiration = "fasoj"
+//    }
+    
         //set up data base with items plist into database
         //get the food objects from the plist
         
@@ -57,7 +73,7 @@ struct DatabaseHelper {
         //        }
         
         //save the new chagnes
-    }
+
     
     
     //return food object if food name in our database matches user's searchterm

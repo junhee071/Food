@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" title="My Food" id="r54-qH-BBD">
                         <barButtonItem key="leftBarButtonItem" title="Manual Search" id="oZH-MR-YfK">
                             <connections>
-                                <segue destination="SIs-Rw-ygS" kind="show" identifier="show search view controller" id="XC4-98-SZj"/>
+                                <action selector="manualSearchPressed:" destination="Lem-wY-vUX" id="hD4-P5-vVz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -81,14 +81,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUt-uI-ced" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-663.20000000000005" y="138.98050974512745"/>
-        </scene>
-        <!--SearchScreenViewController-->
-        <scene sceneID="wbP-rN-bDC">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SearchScreenViewController" storyboardName="SearchScreen" referencedIdentifier="SearchScreenViewController" id="SIs-Rw-ygS" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xnk-AO-8N2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="957" y="-290"/>
         </scene>
     </scenes>
 </document>

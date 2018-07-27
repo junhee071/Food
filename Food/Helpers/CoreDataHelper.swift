@@ -60,6 +60,17 @@ struct CoreDataHelper {
         }
     }
     
+    static func loadFoods(with request: NSFetchRequest<Food> = Food.fetchRequest()) -> [Food] {
+        var filteredFoodArray: [Food] = []
+        do {
+            filteredFoodArray = try context.fetch(request)
+        }
+        catch {
+            print("Error fetching data from context \(error)")
+        }
+        return filteredFoodArray
+    }
+    
     //testing this
     static func retrieveFoodAgain() -> [Food] {
         do {

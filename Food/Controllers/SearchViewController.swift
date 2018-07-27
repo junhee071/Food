@@ -8,120 +8,94 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 protocol SearchViewControllerDelegate: class {
     func search(_ viewController: SearchViewController, didSelectANew food: Food)
 }
 
-class SearchViewController: UITableViewController, UISearchBarDelegate {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
+    
+    @IBOutlet var foodTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    var friendsArray: [Food] = []
-    var filteredFriendsArray = [Food]()
+    var foodsArray: [Food] = []
     
     weak var delegate: SearchViewControllerDelegate?
     
     
     
-    @IBOutlet weak var FindExpirationDate: UIButton!
-    
-    func searchBarIsEmpty() -> Bool {
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-        filteredFriendsArray = friendsArray.filter({( food: Food) -> Bool in
-            return food.name.lowercased().contains(searchText.lowercased())
-        })
-        tableView.reloadData()
-        }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Foods"
-        definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
-    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.destination is ExpirationDateTableViewController {
-//            let vc = segue.destination as? ExpirationDateTableViewController
-//            vc?.foodName = searchBar.text!
-//
-//        }
-//    }
-    
-   
-    
-    func isFiltering() ->  Bool {
-        return searchController.isActive && !searchBarIsEmpty()
+        let request: NSFetchRequest<Food> = Food.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        foodsArray = CoreDataHelper.loadFoods(with: request)
+        searchBar.delegate = self
+        foodTableView.delegate = self
+        foodTableView.dataSource = self
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foodsArray.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering() {
-            return filteredFriendsArray.count
-        }
-        return friendsArray.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
-        
-        let food: Food
-        
-        if isFiltering() {
-            food = filteredFriendsArray[indexPath.row]
-        } else {
-            food = friendsArray[indexPath.row]
-        }
-        
-        
-        cell.textLabel!.text = food.name
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = foodsArray[indexPath.row].name
         return cell
     }
     
-    
-    @IBAction func findExpirationDateButtonTapped(_ sender: UIButton) {
-//        let data = DatabaseHelper.obtainDatabase()
-        var food: Food? = nil
-        
-        //call the getFood() function in databasehelper
-        food = DatabaseHelper.getFood(for: searchBar.text!)
-   
-        
-        if let foundFood = food {
-            //create timer save to coreData
-            
-            //notift tghe delegate what food was selected by the user
-            delegate?.search(self, didSelectANew: foundFood)
-            
-            //dismiss myself
-            self.navigationController?.popViewController(animated: true)
-        } else {
-            //not found
-        }
-        
-    }
+//    @IBAction func findExpirationDateButtonTapped(_ sender: UIButton) {
+////        let data = DatabaseHelper.obtainDatabase()
+//        var food: Food? = nil
+//
+//        //call the getFood() function in databasehelper
+//        food = DatabaseHelper.getFood(for: searchBar.text!)
+//
+//
+//        if let foundFood = food {
+//            //create timer save to coreData
+//
+//            //notift tghe delegate what food was selected by the user
+//            delegate?.search(self, didSelectANew: foundFood)
+//
+//            //dismiss myself
+//            self.navigationController?.popViewController(animated: true)
+//        } else {
+//            //not found
+//        }
+//
+//    }
 }
 
-extension SearchViewController: UISearchResultsUpdating {
-    // MARK: - UISearchResultsUpdating Delegate
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchText: nahsearchBar.text!)
-
+extension SearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+             let request: NSFetchRequest<Food> = Food.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            foodsArray = CoreDataHelper.loadFoods(with: request)
+            foodTableView.reloadData()
+        }
+        else {
+            let request: NSFetchRequest<Food> = Food.fetchRequest()
+            
+           request.predicate = NSPredicate(format: "name BEGINSWITH[cd] %@", searchText)
+            
+            request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            foodsArray = CoreDataHelper.loadFoods(with: request)
+            print(foodsArray.count)
+            foodTableView.reloadData()
+        }
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+    
 }
 
 

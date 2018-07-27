@@ -41,7 +41,6 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchButtonTapped:" destination="h5o-5k-Llt" eventType="touchUpInside" id="Yi9-yI-81Y"/>
-                                    <segue destination="Lxe-UP-sZa" kind="show" id="B89-oc-uPQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syg-zJ-uxP" userLabel="Take Picture Button">
@@ -84,14 +83,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRJ-Y9-6Nx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="104.8" y="140.77961019490255"/>
-        </scene>
-        <!--SearchScreenViewController-->
-        <scene sceneID="neO-Vn-cnz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SearchScreen" referencedIdentifier="SearchScreenViewController" id="Lxe-UP-sZa" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bQt-yd-sRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1562" y="139"/>
         </scene>
     </scenes>
 </document>
