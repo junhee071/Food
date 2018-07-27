@@ -83,6 +83,22 @@ struct DatabaseHelper {
         }
     }
     
+    static func getFood2(for searchTerm: String) -> [Food]? {
+        //use fetch and predicates for coredata
+        do {
+            let predicate = NSPredicate(format: "name == %@", searchTerm)
+            let fetchedResults = CoreDataHelper.retrieveFood(predicate: predicate)
+            //            let fetchRequest: NSFetchRequest<Food> = CoreDataHelper.retrieveFood() as! NSFetchRequest<Food>
+            //            fetchRequest.predicate = NSPredicate(format: "name == %@", searchTerm)
+            //            let fetchedResults = try context.fetch(fetchRequest) as! [Food]
+            return fetchedResults
+        }
+            
+        catch  {
+            print("Fetch task failed")
+        }
+    }
+    
 }
     
     
