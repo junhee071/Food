@@ -15,21 +15,31 @@
 import Foundation
 import UIKit
 
+//
+
+
 
 class ExpirationDateTableViewController: UITableViewController, SearchViewControllerDelegate {
     
     func search(_ viewController: SearchViewController, didSelectANew food: Food) {
-        fridge.append(food)
+        print("helloooo")
+        fridge.insert(food, at: 0)
+        let fridgeItem = CoreDataHelper.newFridgeItem()
+        viewController.s
 //        fridge.insert(food, at: 0)
 //        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         tableView.reloadData()
     }
     
+    
+    
     @IBAction func manualSearchPressed(_ sender: Any) {
         
         let searchStoryboard = UIStoryboard(name: "SearchScreen", bundle: nil)
         let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+        searchVC?.delegate = self
         self.navigationController?.pushViewController(searchVC!, animated: true)
+        
 
     }
     

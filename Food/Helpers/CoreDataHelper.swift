@@ -27,6 +27,11 @@ struct CoreDataHelper {
         return food
     }
     
+    static func newFridgeItem() -> FridgeItems {
+        let fridgeItem = NSEntityDescription.insertNewObject(forEntityName: "FridgeItems", into: context) as! FridgeItems
+        return fridgeItem
+    }
+    
     static func saveFood() {
         do {
             try context.save()

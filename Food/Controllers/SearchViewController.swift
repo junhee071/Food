@@ -12,6 +12,8 @@ import CoreData
 
 protocol SearchViewControllerDelegate: class {
     func search(_ viewController: SearchViewController, didSelectANew food: Food)
+    //create and insert a new food item based on the food item's data
+
 }
 
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -49,6 +51,42 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let subjectCell = tableView.cellForRow(at: indexPath), let destinationViewController = navigationController?.storyboard?.instantiateViewController(withIdentifier: "ExpirationDateTableViewController") as? ExpirationDateTableViewController {
+            //notift tghe delegate what food was selected by the user
+            var food: Food? = nil
+//            food = DatabaseHelper.getFood(for: (subjectCell.textLabel?.text)!)
+            food = foodsArray[indexPath.row]
+            if let foundFood = food {
+                print("hi")
+                print(foundFood)
+                delegate?.search(self, didSelectANew: foundFood)
+            } else {
+
+            }
+            
+            if self.presentingViewController != nil {
+                self.dismiss(animated: false, completion: {
+                    self.navigationController!.popToRootViewController(animated: true)
+                })
+            }
+            else {
+                self.navigationController!.popToRootViewController(animated: true)
+            }
+            
+            //dismiss myself
+//            self.navigationController?.popViewController(animated: true)
+//            navigationController?.pushViewController(destinationViewController, animated: true)
+            
+            
+        }
+
+    }
+    
+    //declare searchvc.delegate = self
+//    somewhere in expiration vc
+//    i think putting it in the manual button action should work but tey it out
+    
 //    @IBAction func findExpirationDateButtonTapped(_ sender: UIButton) {
 ////        let data = DatabaseHelper.obtainDatabase()
 //        var food: Food? = nil
@@ -75,7 +113,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text?.count == 0 {
-             let request: NSFetchRequest<Food> = Food.fetchRequest()
+            let request: NSFetchRequest<Food> = Food.fetchRequest()
             request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
             foodsArray = CoreDataHelper.loadFoods(with: request)
             foodTableView.reloadData()
@@ -83,7 +121,7 @@ extension SearchViewController: UISearchBarDelegate {
         else {
             let request: NSFetchRequest<Food> = Food.fetchRequest()
             
-           request.predicate = NSPredicate(format: "name BEGINSWITH[cd] %@", searchText)
+            request.predicate = NSPredicate(format: "name BEGINSWITH[cd] %@", searchText)
             
             request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
             foodsArray = CoreDataHelper.loadFoods(with: request)
