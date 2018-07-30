@@ -50,8 +50,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nfw-yI-IZY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ppb-Yo-tvY"/>
+                    <navigationItem key="navigationItem" id="Ppb-Yo-tvY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KjB-k6-pmD">
+                            <connections>
+                                <action selector="addCustomButtonTapped:" destination="MRm-xG-3EY" id="MjJ-dy-FEf"/>
+                                <segue destination="4HM-nr-VcC" kind="show" identifier="showCustom" id="IsJ-ln-X02"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addCustom" destination="KjB-k6-pmD" id="7w4-w5-wm6"/>
                         <outlet property="foodTableView" destination="mcQ-e3-vWv" id="Khv-Dp-qxq"/>
                         <outlet property="searchBar" destination="TbB-Pf-MrB" id="ckh-FD-21D"/>
                     </connections>
@@ -59,6 +67,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Rk-rI-bAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="719.20000000000005" y="131.78410794602701"/>
+        </scene>
+        <!--Add Custom View Controller-->
+        <scene sceneID="WeN-dD-9rg">
+            <objects>
+                <viewController storyboardIdentifier="AddCustom" id="4HM-nr-VcC" customClass="AddCustomViewController" customModule="Food" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0A-vo-xnd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-xl-8aa">
+                                <rect key="frame" x="75" y="83" width="69" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-KT-orq" userLabel="Done Button">
+                                <rect key="frame" x="103" y="394" width="37" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="4HM-nr-VcC" eventType="touchUpInside" id="A6t-vD-Qoe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHs-4C-0cK">
+                                <rect key="frame" x="43" y="240" width="290" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8bC-mV-xrm"/>
+                    </view>
+                    <connections>
+                        <outlet property="addItemLabel" destination="2xe-xl-8aa" id="2ce-t1-X5C"/>
+                        <outlet property="doneButto" destination="uuV-KT-orq" id="cdC-aK-Zbv"/>
+                        <outlet property="typeInFoodTextField" destination="GHs-4C-0cK" id="3gq-jr-8Km"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Suu-f4-lY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504.8" y="50.824587706146929"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MTh-JP-VpM">

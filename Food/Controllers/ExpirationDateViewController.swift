@@ -25,7 +25,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         print("helloooo")
         fridge.insert(food, at: 0)
         let fridgeItem = CoreDataHelper.newFridgeItem()
-        viewController.s
+//        viewController.s
 //        fridge.insert(food, at: 0)
 //        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         tableView.reloadData()
@@ -34,12 +34,12 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     
     
     @IBAction func manualSearchPressed(_ sender: Any) {
-        
+
         let searchStoryboard = UIStoryboard(name: "SearchScreen", bundle: nil)
         let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
         searchVC?.delegate = self
         self.navigationController?.pushViewController(searchVC!, animated: true)
-        
+    
 
     }
     
@@ -152,7 +152,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
             let foodToDelete = fridge[indexPath.row]
             CoreDataHelper.delete(food: foodToDelete)
             
-            fridge = CoreDataHelper.retrieveFood(predicate: nil)
+//            fridge = CoreDataHelper.retrieveFood(predicate: nil)
             tableView.reloadData()
 //            self.fridge.remove(at: indexPath.row)
 //            self.tableView.deleteRows(at: [indexPath], with: .automatic)

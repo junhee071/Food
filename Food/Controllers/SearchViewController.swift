@@ -16,30 +16,35 @@ protocol SearchViewControllerDelegate: class {
 
 }
 
+
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     
     @IBOutlet var foodTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var addCustom: UIBarButtonItem!
     
     let searchController = UISearchController(searchResultsController: nil)
-    
+    var stringHolder:String = ""
     var foodsArray: [Food] = []
     
-    weak var delegate: SearchViewControllerDelegate?
-    
+    weak var delegate: SearchViewControllerDelegate!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         let request: NSFetchRequest<Food> = Food.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         foodsArray = CoreDataHelper.loadFoods(with: request)
-        searchBar.delegate = self
+        searchBar.delegate? = self
         foodTableView.delegate = self
         foodTableView.dataSource = self
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodsArray.count
@@ -60,7 +65,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if let foundFood = food {
                 print("hi")
                 print(foundFood)
-                delegate?.search(self, didSelectANew: foundFood)
+                self.delegate?.search(self, didSelectANew: foundFood)
+            
             } else {
 
             }
@@ -108,7 +114,25 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //        }
 //
 //    }
+    
+    
+    
+    @IBAction func addCustomButtonTapped(_ sender: UIBarButtonItem) {
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCustom" {
+            print("it segued")
+        }
+    }
+   
+    
 }
+
+
+
+
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
