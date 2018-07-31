@@ -28,7 +28,7 @@ class AddCustomViewController: UIViewController {
    
     
     @IBAction func doneButtonTapped(_ sender: Any) {
-         self.performSegue(withIdentifier: "SearchViewController", sender: self)
+         self.performSegue(withIdentifier: "backToSearchVC", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "backToSearchVC" {

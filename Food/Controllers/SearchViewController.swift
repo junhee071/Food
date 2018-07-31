@@ -22,6 +22,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     
     @IBOutlet var foodTableView: UITableView!
+
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var addCustom: UIBarButtonItem!
@@ -40,7 +41,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let request: NSFetchRequest<Food> = Food.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         foodsArray = CoreDataHelper.loadFoods(with: request)
-        searchBar.delegate? = self
+        searchBar.delegate = self
         foodTableView.delegate = self
         foodTableView.dataSource = self
     }

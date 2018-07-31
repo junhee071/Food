@@ -152,7 +152,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         if editingStyle == .delete {
             let foodToDelete = fridge[indexPath.row]
             CoreDataHelper.delete(fridgeItem: foodToDelete)
-            
+            fridge.remove(at: indexPath.row)
 //            fridge = CoreDataHelper.retrieveFood(predicate: nil)
             tableView.reloadData()
 //            self.fridge.remove(at: indexPath.row)

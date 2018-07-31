@@ -60,7 +60,7 @@
                     <connections>
                         <outlet property="addCustom" destination="KjB-k6-pmD" id="btQ-Kx-KGC"/>
                         <outlet property="foodTableView" destination="mcQ-e3-vWv" id="Khv-Dp-qxq"/>
-                        <outlet property="searchBar" destination="TbB-Pf-MrB" id="ckh-FD-21D"/>
+                        <outlet property="searchBar" destination="TbB-Pf-MrB" id="E8C-UX-KA9"/>
                         <segue destination="4HM-nr-VcC" kind="show" identifier="showCustom" id="pNC-I1-to7"/>
                     </connections>
                 </viewController>
