@@ -53,15 +53,15 @@
                     <navigationItem key="navigationItem" id="Ppb-Yo-tvY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KjB-k6-pmD">
                             <connections>
-                                <action selector="addCustomButtonTapped:" destination="MRm-xG-3EY" id="MjJ-dy-FEf"/>
-                                <segue destination="4HM-nr-VcC" kind="show" identifier="showCustom" id="IsJ-ln-X02"/>
+                                <action selector="addCustomButtonTapped:" destination="MRm-xG-3EY" id="rZc-GN-XSK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addCustom" destination="KjB-k6-pmD" id="7w4-w5-wm6"/>
+                        <outlet property="addCustom" destination="KjB-k6-pmD" id="btQ-Kx-KGC"/>
                         <outlet property="foodTableView" destination="mcQ-e3-vWv" id="Khv-Dp-qxq"/>
                         <outlet property="searchBar" destination="TbB-Pf-MrB" id="ckh-FD-21D"/>
+                        <segue destination="4HM-nr-VcC" kind="show" identifier="showCustom" id="pNC-I1-to7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Rk-rI-bAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="addItemLabel" destination="2xe-xl-8aa" id="2ce-t1-X5C"/>
-                        <outlet property="doneButto" destination="uuV-KT-orq" id="cdC-aK-Zbv"/>
+                        <outlet property="doneButton" destination="uuV-KT-orq" id="M5V-pd-MbQ"/>
                         <outlet property="typeInFoodTextField" destination="GHs-4C-0cK" id="3gq-jr-8Km"/>
                     </connections>
                 </viewController>

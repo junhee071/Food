@@ -23,6 +23,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet var foodTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var addCustom: UIBarButtonItem!
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -117,15 +118,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     
+
     @IBAction func addCustomButtonTapped(_ sender: UIBarButtonItem) {
-    
+        self.performSegue(withIdentifier: "showCustom", sender: nil)
     }
+        
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCustom" {
             print("it segued")
         }
     }
+    
+    
+   
    
     
 }

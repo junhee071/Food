@@ -65,6 +65,22 @@ struct CoreDataHelper {
         }
     }
     
+    static func retrieveFridgeItems() -> [FridgeItems] {
+        do {
+            
+            let fetchRequest = NSFetchRequest<FridgeItems>(entityName: "FridgeItems")
+            
+            let results = try context.fetch(fetchRequest)
+            
+            return results
+        } catch let error {
+            print("Could not fetch \(error.localizedDescription)")
+            
+            return []
+        }
+    }
+    
+    
     static func loadFoods(with request: NSFetchRequest<Food> = Food.fetchRequest()) -> [Food] {
         var filteredFoodArray: [Food] = []
         do {

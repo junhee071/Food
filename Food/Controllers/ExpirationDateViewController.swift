@@ -90,7 +90,9 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         }
    
         
-    
+    override func viewWillAppear(_ animated: Bool) {
+        CoreDataHelper.retrieveFridgeItems()
+    }
     override func didReceiveMemoryWarning() {
          super.didReceiveMemoryWarning()
     }
