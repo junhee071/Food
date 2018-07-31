@@ -27,8 +27,11 @@ struct CoreDataHelper {
         return food
     }
     
-    static func newFridgeItem() -> FridgeItems {
+    static func newFridgeItem(food: Food) -> FridgeItems {
         let fridgeItem = NSEntityDescription.insertNewObject(forEntityName: "FridgeItems", into: context) as! FridgeItems
+        fridgeItem.expirationDate = food.expiration
+        fridgeItem.name = food.name
+        saveFood()
         return fridgeItem
     }
     
@@ -43,6 +46,12 @@ struct CoreDataHelper {
     
     static func delete(food: Food) {
         context.delete(food)
+        
+        saveFood()
+    }
+    
+    static func delete(fridgeItem: FridgeItems) {
+        context.delete(fridgeItem)
         
         saveFood()
     }
@@ -67,7 +76,6 @@ struct CoreDataHelper {
     
     static func retrieveFridgeItems() -> [FridgeItems] {
         do {
-            
             let fetchRequest = NSFetchRequest<FridgeItems>(entityName: "FridgeItems")
             
             let results = try context.fetch(fetchRequest)

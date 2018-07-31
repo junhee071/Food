@@ -23,8 +23,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     
     func search(_ viewController: SearchViewController, didSelectANew food: Food) {
         print("helloooo")
-        fridge.insert(food, at: 0)
-        let fridgeItem = CoreDataHelper.newFridgeItem()
+        let fridgeItem = CoreDataHelper.newFridgeItem(food: food)
+        fridge.append(fridgeItem)
 //        viewController.s
 //        fridge.insert(food, at: 0)
 //        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
@@ -43,7 +43,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 
     }
     
-    var fridge: [Food] = []
+    var fridge: [FridgeItems] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
@@ -68,7 +68,6 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         super.viewDidLoad()
         let num = 245
         print("The number is \(num)")
-        fridge = []
 
 //        print(foodName)
 //        //access plist file as dictionary
@@ -91,7 +90,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
    
         
     override func viewWillAppear(_ animated: Bool) {
-        CoreDataHelper.retrieveFridgeItems()
+        fridge = CoreDataHelper.retrieveFridgeItems()
     }
     override func didReceiveMemoryWarning() {
          super.didReceiveMemoryWarning()
@@ -144,7 +143,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         let foodForTheCurrentIndexPath = fridge[indexPath.row]
         
         cell.foodNameLabel.text = foodForTheCurrentIndexPath.name
-        cell.expirationTimeLabel.text = foodForTheCurrentIndexPath.expiration
+        cell.expirationTimeLabel.text = foodForTheCurrentIndexPath.expirationDate
         
         return cell
     }
@@ -152,7 +151,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let foodToDelete = fridge[indexPath.row]
-            CoreDataHelper.delete(food: foodToDelete)
+            CoreDataHelper.delete(fridgeItem: foodToDelete)
             
 //            fridge = CoreDataHelper.retrieveFood(predicate: nil)
             tableView.reloadData()
