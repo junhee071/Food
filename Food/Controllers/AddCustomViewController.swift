@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-class AddCustomViewController: UIViewController {
+
+class AddCustomViewController: UIViewController, UITextFieldDelegate {
+    
+    var character: String!
     
     @IBOutlet weak var addItemLabel: UILabel!
     
@@ -24,16 +27,29 @@ class AddCustomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        typeInFoodTextField.delegate = self
+        
     }
    
     
-    @IBAction func doneButtonTapped(_ sender: Any) {
-         self.performSegue(withIdentifier: "backToSearchVC", sender: self)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func doneButtonTapped(_ sender: UIStoryboardSegue) {
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "backToSearchVC" {
-            let vc = segue.destination as! SearchViewController
-            vc.stringHolder = typeInFoodTextField.text!
+        if let newCharacterName = typeInFoodTextField.text {
+            character = newCharacterName
         }
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? SearchViewController {
+//            destination.delegate = self
+//            destination.stringholder = typeInFoodTextField.text!
+//        }
+//    }
 }

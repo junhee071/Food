@@ -20,11 +20,7 @@ import UIKit
 
 
 class ExpirationDateTableViewController: UITableViewController, SearchViewControllerDelegate {
-    func passFood(string: String) {
-        print("sup")
-    }
-    
-    
+
     
     
     func search(_ viewController: SearchViewController, didSelectANew food: Food) {
@@ -36,6 +32,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 //        tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         tableView.reloadData()
     }
+    
+  
     
     
     

@@ -13,11 +13,17 @@ import CoreData
 protocol SearchViewControllerDelegate: class {
     func search(_ viewController: SearchViewController, didSelectANew food: Food)
     //create and insert a new food item based on the food item's data
-
+    
+    
 }
 
 
+
+
 class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+  
+    
     
 
     
@@ -28,20 +34,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var addCustom: UIBarButtonItem!
     
     let searchController = UISearchController(searchResultsController: nil)
-    var stringHolder:String = ""
     var foodsArray: [Food] = []
+    var holder: String = ""
+    //this was on tuesday july 31: weak var delegate: SearchViewControllerDelegate!
+    weak var delegate: SearchViewControllerDelegate?
     
-    weak var delegate: SearchViewControllerDelegate!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let request: NSFetchRequest<Food> = Food.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         foodsArray = CoreDataHelper.loadFoods(with: request)
-        searchBar.delegate = self
+        searchBar?.delegate = self
         foodTableView.delegate = self
         foodTableView.dataSource = self
     }
@@ -82,6 +88,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.navigationController!.popToRootViewController(animated: true)
             }
             
+            func passFood(string: String) {
+                print("notified")
+            }
             //dismiss myself
 //            self.navigationController?.popViewController(animated: true)
 //            navigationController?.pushViewController(destinationViewController, animated: true)
@@ -123,7 +132,30 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func addCustomButtonTapped(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "showCustom", sender: nil)
     }
-        
+    
+    
+    @IBAction func unwindWithSegue(_ sender: UIStoryboardSegue) {
+        if sender.source is AddCustomViewController {
+            if let senderVC = sender.source as? AddCustomViewController {
+                let holder2 = senderVC.character
+                holder = holder2!
+                addCustomFood(name: holder)
+            }
+        }
+    }
+    
+    func addCustomFood(name: String) {
+        let newFoodCoreDataIem = CoreDataHelper.newFood()
+        newFoodCoreDataIem.name = name
+        newFoodCoreDataIem.expiration = "3 months"
+        CoreDataHelper.saveFood()
+        let request: NSFetchRequest<Food> = Food.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        foodsArray = CoreDataHelper.loadFoods(with: request)
+        self.delegate?.search(self, didSelectANew: newFoodCoreDataIem)
+        self.navigationController!.popToRootViewController(animated: true)
+
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCustom" {
