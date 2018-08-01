@@ -45,6 +45,7 @@ struct DatabaseHelper {
                         for foodItem in loadedFoodItems {
                             let newFoodCoreDataItem = CoreDataHelper.newFood()
                             newFoodCoreDataItem.name = foodItem.name
+                            
                             newFoodCoreDataItem.expiration = foodItem.expiration
                         }
                         CoreDataHelper.saveFood()

@@ -29,8 +29,49 @@ struct CoreDataHelper {
     
     static func newFridgeItem(food: Food) -> FridgeItems {
         let fridgeItem = NSEntityDescription.insertNewObject(forEntityName: "FridgeItems", into: context) as! FridgeItems
-        fridgeItem.expirationDate = food.expiration
         fridgeItem.name = food.name
+        
+        let holder = food.expiration
+        var convertingExpirationDate = holder!
+        let fullname = convertingExpirationDate
+        let fullnamearr = fullname.components(separatedBy: " ")
+
+        var firstname: String = fullnamearr[0]
+        var lastname: String = fullnamearr[1]
+
+
+        var a:Int = Int(firstname)!
+
+        let whichTimeInterval = lastname
+        switch whichTimeInterval {
+        case "days":
+            a = a * 86400
+        case "weeks":
+            a = a * 604800
+        case "months":
+            a = a * 2630200
+
+        default:
+            print("0 days left")
+        }
+
+        //obtain date from today that food will expire
+        let s5 = NSDate(timeIntervalSinceNow: TimeInterval(a))
+        let stringHolder = "\(s5)"
+        
+
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = stringHolder
+
+        let s6 = stringHolder.components(separatedBy: " ")
+        var date: String = s6[0]
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateFormat = "yyyy-MM-dd"
+        dateFormatter2.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale?
+        let dateFinal = dateFormatter2.date(from: "\(date)")!
+        fridgeItem.expirationDate = dateFinal
+
         saveFood()
         return fridgeItem
     }

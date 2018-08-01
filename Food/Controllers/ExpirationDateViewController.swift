@@ -75,8 +75,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         let num = 245
         print("The number is \(num)")
         
-        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(printTime), userInfo: nil, repeats: true)
-        timer.fire()
+//        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(printTime), userInfo: nil, repeats: true)
+//        timer.fire()
 
 //        print(foodName)
 //        //access plist file as dictionary
@@ -156,62 +156,63 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 
         cell.foodNameLabel.text = foodForTheCurrentIndexPath.name
        
-        let holder = printTime(aHolder: foodForTheCurrentIndexPath.expirationDate!)
-        cell.expirationTimeLabel.text = holder
+        
+        cell.expirationTimeLabel.text = "\(foodForTheCurrentIndexPath.expirationDate)"
         
         return cell
     }
     
-    @objc func printTime(aHolder: String) -> String {
-        var convertingExpirationDate = aHolder
-        let fullname = convertingExpirationDate
-        let fullnamearr = fullname.components(separatedBy: " ")
-        
-        var firstname: String = fullnamearr[0]
-        var lastname: String = fullnamearr[1]
-        
-        
-        var a:Int = Int(firstname)!
-        
-        let whichTimeInterval = lastname
-        switch whichTimeInterval {
-        case "days":
-            a = a * 86400
-        case "weeks":
-            a = a * 604800
-        case "months":
-            a = a * 2630200
-            
-        default:
-            print("0 days left")
-        }
-        
-        let s5 = NSDate(timeIntervalSinceNow: TimeInterval(a)) // it means one minute (60 seconds) before the current time
-        let stringHolder = "\(s5)"
-        let formatter = DateFormatter()
-        let userCalendar = Calendar.current
-        let requestedComponent : Set<Calendar.Component> = [ .month, .day, .hour]
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = stringHolder
-        
-        let s6 = stringHolder.components(separatedBy: " ")
-        var date: String = s6[0]
-        
-        let isoDate = "\(date)"
-        
-        let dateFormatter2 = DateFormatter()
-        dateFormatter2.dateFormat = "yyyy-MM-dd"
-        dateFormatter2.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale?
-        let dateFinal = dateFormatter2.date(from: isoDate)!
-        
-        formatter.dateFormat = "yyyy-MM-dd"
-        let startTime = Date()
-        let endTime = date
-        let timeDifference = userCalendar.dateComponents(requestedComponent, from: startTime, to: dateFinal)
-        let holder = "\(timeDifference.month!) Months \(timeDifference.day!) Days left"
-        return holder
-    }
+//    @objc func printTime(aHolder: String) -> String {
+//        var convertingExpirationDate = aHolder
+//        let fullname = convertingExpirationDate
+//        let fullnamearr = fullname.components(separatedBy: " ")
+//
+//        var firstname: String = fullnamearr[0]
+//        var lastname: String = fullnamearr[1]
+//
+//
+//        var a:Int = Int(firstname)!
+//
+//        let whichTimeInterval = lastname
+//        switch whichTimeInterval {
+//        case "days":
+//            a = a * 86400
+//        case "weeks":
+//            a = a * 604800
+//        case "months":
+//            a = a * 2630200
+//
+//        default:
+//            print("0 days left")
+//        }
+//
+//        //obtain date from today that food will expire
+//        let s5 = NSDate(timeIntervalSinceNow: TimeInterval(a))
+//        let stringHolder = "\(s5)"
+//        let formatter = DateFormatter()
+//        let userCalendar = Calendar.current
+//        let requestedComponent : Set<Calendar.Component> = [ .month, .day, .hour]
+//
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = stringHolder
+//
+//        let s6 = stringHolder.components(separatedBy: " ")
+//        var date: String = s6[0]
+//
+//        let isoDate = "\(date)"
+//
+//        let dateFormatter2 = DateFormatter()
+//        dateFormatter2.dateFormat = "yyyy-MM-dd"
+//        dateFormatter2.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale?
+//        let dateFinal = dateFormatter2.date(from: isoDate)!
+//
+//        formatter.dateFormat = "yyyy-MM-dd"
+//        let startTime = Date()
+//        let endTime = date
+//        let timeDifference = userCalendar.dateComponents(requestedComponent, from: startTime, to: dateFinal)
+//        let holder = "\(timeDifference.month!) Months \(timeDifference.day!) Days left"
+//        return holder
+//    }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let foodToDelete = fridge[indexPath.row]
