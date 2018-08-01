@@ -36,14 +36,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let searchController = UISearchController(searchResultsController: nil)
     var foodsArray: [Food] = []
     var holder: String = ""
-    //this was on tuesday july 31: weak var delegate: SearchViewControllerDelegate!
+    //this was on tues: weak var delegate: SearchViewControllerDelegate!
     weak var delegate: SearchViewControllerDelegate?
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        let dog = CountdownHelper()
+//        dog.work()
         let request: NSFetchRequest<Food> = Food.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         foodsArray = CoreDataHelper.loadFoods(with: request)
