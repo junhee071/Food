@@ -75,6 +75,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         let num = 245
         print("The number is \(num)")
         
+        
 //        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(printTime), userInfo: nil, repeats: true)
 //        timer.fire()
 
@@ -96,10 +97,6 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
             
         
         }
-   
-
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         fridge = CoreDataHelper.retrieveFridgeItems()
@@ -155,14 +152,20 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         let foodForTheCurrentIndexPath = fridge[indexPath.row]
 
         cell.foodNameLabel.text = foodForTheCurrentIndexPath.name
-       
         
-        cell.expirationTimeLabel.text = "\(foodForTheCurrentIndexPath.expirationDate)"
+        var stringNumber = foodForTheCurrentIndexPath.expirationDate
+        var numberFromString: Double? = Double(stringNumber!)
+        cell.expiryTimeInterval = numberFromString
+        
+        
+        //5433200
+//        cell.printTime(holder: foodForTheCurrentIndexPath.expirationDate!)
+        //cell.expirationTimeLabel.text = "\(foodForTheCurrentIndexPath.expirationDate //foodForTheCurrentIndexPath.expirationDate)"
         
         return cell
     }
     
-//    @objc func printTime(aHolder: String) -> String {
+//    @objc func printTime(aHolder: String, textLabel: UILabel) {
 //        var convertingExpirationDate = aHolder
 //        let fullname = convertingExpirationDate
 //        let fullnamearr = fullname.components(separatedBy: " ")
@@ -211,7 +214,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 //        let endTime = date
 //        let timeDifference = userCalendar.dateComponents(requestedComponent, from: startTime, to: dateFinal)
 //        let holder = "\(timeDifference.month!) Months \(timeDifference.day!) Days left"
-//        return holder
+//        textLabel.text = holder
 //    }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

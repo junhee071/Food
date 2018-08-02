@@ -5,7 +5,7 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="FridgeItems" representedClassName="FridgeItems" syncable="YES" codeGenerationType="class">
-        <attribute name="expirationDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="expirationDate" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
     </entity>
     <elements>

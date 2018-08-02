@@ -148,7 +148,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func addCustomFood(name: String) {
         let newFoodCoreDataIem = CoreDataHelper.newFood()
         newFoodCoreDataIem.name = name
-        newFoodCoreDataIem.expiration = "3 months"
+        newFoodCoreDataIem.expiration = "15 seconds"
         CoreDataHelper.saveFood()
         let request: NSFetchRequest<Food> = Food.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]

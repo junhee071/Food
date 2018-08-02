@@ -1856,11 +1856,5 @@
 		<key>expiration</key>
 		<string>0</string>
 	</dict>
-	<dict>
-		<key>name</key>
-		<string>Yogurt, Sour Cream, Cottage Cheese, Dips- Sour cream based Kraft</string>
-		<key>expiration</key>
-		<string>15 days</string>
-	</dict>
 </array>
 </plist>

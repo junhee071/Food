@@ -27,9 +27,13 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         typeInFoodTextField.delegate = self
-        
+    }
+    
+    func textFieldShouldReturn(_ typeInFoodTextField: UITextField) -> Bool {
+        typeInFoodTextField.resignFirstResponder()
+        return true
     }
    
     
@@ -46,6 +50,8 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate {
             character = newCharacterName
         }
     }
+    
+  
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let destination = segue.destination as? SearchViewController {
 //            destination.delegate = self

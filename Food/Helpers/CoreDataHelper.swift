@@ -41,9 +41,11 @@ struct CoreDataHelper {
 
 
         var a:Int = Int(firstname)!
-
+        let x = a
         let whichTimeInterval = lastname
         switch whichTimeInterval {
+        case "seconds":
+            a = x
         case "days":
             a = a * 86400
         case "weeks":
@@ -54,23 +56,27 @@ struct CoreDataHelper {
         default:
             print("0 days left")
         }
+        
+        let b: Int = a
+        var myString = String(b)
+        fridgeItem.expirationDate = myString
 
         //obtain date from today that food will expire
-        let s5 = NSDate(timeIntervalSinceNow: TimeInterval(a))
-        let stringHolder = "\(s5)"
-        
-
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = stringHolder
-
-        let s6 = stringHolder.components(separatedBy: " ")
-        var date: String = s6[0]
-        let dateFormatter2 = DateFormatter()
-        dateFormatter2.dateFormat = "yyyy-MM-dd"
-        dateFormatter2.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale?
-        let dateFinal = dateFormatter2.date(from: "\(date)")!
-        fridgeItem.expirationDate = dateFinal
+//        let s5 = NSDate(timeIntervalSinceNow: TimeInterval(a))
+//        let stringHolder = "\(s5)"
+//
+//
+//
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = stringHolder
+//
+//        let s6 = stringHolder.components(separatedBy: " ")
+//        var date: String = s6[0]
+//        let dateFormatter2 = DateFormatter()
+//        dateFormatter2.dateFormat = "yyyy-MM-dd"
+//        dateFormatter2.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale?
+//        let dateFinal = dateFormatter2.date(from: "\(date)")!
+//        fridgeItem.expirationDate = dateFinal
 
         saveFood()
         return fridgeItem
