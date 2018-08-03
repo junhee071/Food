@@ -202,7 +202,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         CoreDataHelper.saveFood()
         let request: NSFetchRequest<Food> = Food.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        foodsArray = CoreDataHelper.loadFoods(with: request)
+        //foodsArray = CoreDataHelper.loadFoods(with: request)
         self.delegate?.search(self, didSelectANew: newFoodCoreDataIem)
         self.navigationController!.popToRootViewController(animated: true)
 
