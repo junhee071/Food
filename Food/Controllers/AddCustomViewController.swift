@@ -25,16 +25,20 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     
     @IBOutlet weak var pickerView2: UIPickerView!
     
+
     @IBOutlet weak var typeInFoodTextField: UITextField!
     
     
     @IBOutlet weak var doneButton: UIButton!
     
     let numbers = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
-    let numbers2 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+    let numbers2 = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pickerView1.tag = 1
+        pickerView2.tag = 2
         
         typeInFoodTextField.delegate = self
         pickerView1.delegate = self
@@ -62,11 +66,20 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
             character = newCharacterName
         }
         
-        numMonths = monthss
-        print(monthss)
-        numDays = days
-        print(numMonths)
-        print(numDays)
+        if numMonths == nil {
+            numMonths = "0"
+        } else {
+            numMonths = monthss
+        }
+        
+        if numDays == nil {
+            numDays = "1"
+        } else {
+            numDays = days
+        }
+        //print(monthss)
+        //print(days)
+       
         
     }
     
@@ -75,11 +88,26 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return numbers.count
+        switch pickerView.tag {
+            case 1:
+                return numbers.count
+            case 2:
+                return numbers2.count
+        default:
+            return 0
+        }
     }
+        
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return numbers[row]
+        switch pickerView.tag {
+            case 1:
+                return numbers[row]
+            case 2:
+                return numbers2[row]
+        default:
+            return ""
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

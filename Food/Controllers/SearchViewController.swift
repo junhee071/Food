@@ -155,6 +155,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     holder3 = holder7
                 }
                
+                //print(holder2)
+                //print(holder3)
                 
                 //print("\(holder2) supeup")
                 //print(holder3)
@@ -174,7 +176,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         months4 = Int(months3)
         let days3 = days
         days4 = Int(days3)
-       
         
         
         let totalTime = months4! + (days4!/30)
