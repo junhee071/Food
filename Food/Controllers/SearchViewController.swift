@@ -36,6 +36,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let searchController = UISearchController(searchResultsController: nil)
     var foodsArray: [Food] = []
     var holder: String = ""
+    var holder2: String = ""
+    var holder3: String = ""
     //this was on tues: weak var delegate: SearchViewControllerDelegate!
     weak var delegate: SearchViewControllerDelegate?
     
@@ -138,17 +140,48 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func unwindWithSegue(_ sender: UIStoryboardSegue) {
         if sender.source is AddCustomViewController {
             if let senderVC = sender.source as? AddCustomViewController {
-                let holder2 = senderVC.character
-                holder = holder2!
-                addCustomFood(name: holder)
+                let holder4 = senderVC.character
+                holder = holder4!
+                
+                
+                let holder5 = senderVC.numMonths
+                if let holder8 = holder5 {
+                    holder2 = holder8
+                }
+               
+                
+                let holder6 = senderVC.numDays
+                if let holder7 = holder6 {
+                    holder3 = holder7
+                }
+               
+                
+                //print("\(holder2) supeup")
+                //print(holder3)
+                addCustomFood(name: holder, months: holder2, days: holder3)
             }
         }
     }
     
-    func addCustomFood(name: String) {
+    func addCustomFood(name: String, months: String, days: String) {
+        
+        var months4: Int?
+        var days4: Int?
         let newFoodCoreDataIem = CoreDataHelper.newFood()
         newFoodCoreDataIem.name = name
-        newFoodCoreDataIem.expiration = "15 seconds"
+        
+        let months3 = months
+        months4 = Int(months3)
+        let days3 = days
+        days4 = Int(days3)
+       
+        
+        
+        let totalTime = months4! + (days4!/30)
+        let totalTime2 = totalTime
+        newFoodCoreDataIem.expiration = "\(totalTime2) months"
+
+        
         CoreDataHelper.saveFood()
         let request: NSFetchRequest<Food> = Food.fetchRequest()
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]

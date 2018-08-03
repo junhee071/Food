@@ -57,10 +57,11 @@ struct CoreDataHelper {
             print("0 days left")
         }
         
-        let b: Int = a
-        var myString = String(b)
-        fridgeItem.expirationDate = myString
-
+        let b: (Int32) = Int32(a)
+        //var myString = String(b)
+        let y = Int32(NSDate().timeIntervalSince1970)
+        fridgeItem.expirationDate = b + y
+        
         //obtain date from today that food will expire
 //        let s5 = NSDate(timeIntervalSinceNow: TimeInterval(a))
 //        let stringHolder = "\(s5)"

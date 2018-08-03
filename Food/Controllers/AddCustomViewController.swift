@@ -10,32 +10,44 @@ import Foundation
 import UIKit
 
 
-class AddCustomViewController: UIViewController, UITextFieldDelegate {
+class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var character: String!
+    var numMonths: String!
+    var monthss: String!
+    var numDays: String!
+    var days: String!
     
     @IBOutlet weak var addItemLabel: UILabel!
     
+
+    @IBOutlet weak var pickerView1: UIPickerView!
     
+    @IBOutlet weak var pickerView2: UIPickerView!
     
     @IBOutlet weak var typeInFoodTextField: UITextField!
     
     
     @IBOutlet weak var doneButton: UIButton!
     
-    
+    let numbers = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+    let numbers2 = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         typeInFoodTextField.delegate = self
+        pickerView1.delegate = self
+        pickerView1.dataSource = self
+        pickerView2.delegate = self
+        pickerView2.dataSource = self
     }
     
     func textFieldShouldReturn(_ typeInFoodTextField: UITextField) -> Bool {
         typeInFoodTextField.resignFirstResponder()
         return true
     }
-   
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,13 +61,64 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate {
         if let newCharacterName = typeInFoodTextField.text {
             character = newCharacterName
         }
+        
+        numMonths = monthss
+        print(monthss)
+        numDays = days
+        print(numMonths)
+        print(numDays)
+        
     }
     
-  
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? SearchViewController {
-//            destination.delegate = self
-//            destination.stringholder = typeInFoodTextField.text!
-//        }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return numbers.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return numbers[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if (pickerView == pickerView1){
+            days = numbers[pickerView.selectedRow(inComponent: 0)]
+            print("\(days) sfs")
+        }
+        else {
+            monthss = numbers2[pickerView2.selectedRow(inComponent: 0)]
+            print("\(monthss) sfss")
+        }
+        
+
+        
+    }
+    
+    //months pickerview
+//    func numberOfComponents2(in pickerView2: UIPickerView) -> Int {
+//        return 1
 //    }
+//
+//    func pickerView2(_ pickerView2: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+//        return numbers2.count
+//    }
+//
+//    func pickerView2(_ pickerView2: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        return numbers2[row]
+//    }
+//
+//    func pickerView2(_ pickerView2: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        monthss = numbers2[pickerView2.selectedRow(inComponent: 0)]
+//        print("\(monthss) sfss")
+//    }
+    
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if let destination = segue.destination as? SearchViewController {
+    //            destination.delegate = self
+    //            destination.stringholder = typeInFoodTextField.text!
+    //        }
+    //    }
 }
+

@@ -154,9 +154,9 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         cell.foodNameLabel.text = foodForTheCurrentIndexPath.name
         
         var stringNumber = foodForTheCurrentIndexPath.expirationDate
-        var numberFromString: Double? = Double(stringNumber!)
-        cell.expiryTimeInterval = numberFromString
+       // cell.expiryTimeInterval = numberFromString
         
+        cell.expirationTimeLabel.text = "\(Int((Double(fridge[indexPath.row].expirationDate)) - Date().timeIntervalSince1970))"
         
         //5433200
 //        cell.printTime(holder: foodForTheCurrentIndexPath.expirationDate!)
