@@ -31,16 +31,22 @@ struct CoreDataHelper {
         let fridgeItem = NSEntityDescription.insertNewObject(forEntityName: "FridgeItems", into: context) as! FridgeItems
         fridgeItem.name = food.name
         
-        let holder = food.expiration
-        var convertingExpirationDate = holder!
+        let holder = food.expiration!
+        var convertingExpirationDate = holder
         let fullname = convertingExpirationDate
         let fullnamearr = fullname.components(separatedBy: " ")
-
-        var firstname: String = fullnamearr[0]
+        print("\(fullnamearr[0])")
+        var a: Int = 0
+        if let firstname: String = fullnamearr[0] {
+            a = Int(firstname)!
+            
+            print(firstname)
+        }
         var lastname: String = fullnamearr[1]
+        
+        
+        
 
-
-        var a:Int = Int(firstname)!
         let x = a
         let whichTimeInterval = lastname
         switch whichTimeInterval {

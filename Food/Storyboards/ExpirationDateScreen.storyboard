@@ -58,6 +58,11 @@
                                 <action selector="manualSearchPressed:" destination="Lem-wY-vUX" id="hD4-P5-vVz"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="4Cv-96-1s0">
+                            <connections>
+                                <action selector="refreshButtonTapped:" destination="Lem-wY-vUX" id="RMP-24-97M"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5K-eN-XWE" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -49,6 +49,11 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 
     }
     
+    
+    @IBAction func refreshButtonTapped(_ sender: UIBarButtonItem) {
+        tableView.reloadData()
+    }
+    
     var fridge: [FridgeItems] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

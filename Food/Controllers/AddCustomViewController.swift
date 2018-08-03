@@ -31,7 +31,7 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     
     @IBOutlet weak var doneButton: UIButton!
     
-    let numbers = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+    let numbers = ["days","months"]
     let numbers2 = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
     
     override func viewDidLoad() {
@@ -66,19 +66,15 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
             character = newCharacterName
         }
         
-        if numMonths == nil {
-            numMonths = "0"
-        } else {
-            numMonths = monthss
-        }
+       
+        numMonths = numbers2[pickerView2.selectedRow(inComponent: 0)]
         
-        if numDays == nil {
-            numDays = "1"
-        } else {
-            numDays = days
-        }
-        //print(monthss)
-        //print(days)
+    
+    
+        numDays = numbers[pickerView1.selectedRow(inComponent: 0)]
+    
+        print(numMonths)
+        print(numDays)
        
         
     }
@@ -111,14 +107,13 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if (pickerView == pickerView1){
+        
+        if pickerView.tag == 1 {
             days = numbers[pickerView.selectedRow(inComponent: 0)]
-            print("\(days) sfs")
+        } else if pickerView.tag == 2 {
+            monthss = numbers2[pickerView.selectedRow(inComponent: 0)]
         }
-        else {
-            monthss = numbers2[pickerView2.selectedRow(inComponent: 0)]
-            print("\(monthss) sfss")
-        }
+      
         
 
         

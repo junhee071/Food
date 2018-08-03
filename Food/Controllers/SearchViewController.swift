@@ -143,18 +143,20 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let holder4 = senderVC.character
                 holder = holder4!
                 
-                
                 let holder5 = senderVC.numMonths
-                if let holder8 = holder5 {
-                    holder2 = holder8
-                }
+                holder2 = holder5!
+//                let holder5 = senderVC.numMonths
+//                if let holder8 = holder5 {
+//                    holder2 = holder8
+//                }
                
                 
                 let holder6 = senderVC.numDays
-                if let holder7 = holder6 {
-                    holder3 = holder7
-                }
-               
+                holder3 = holder6!
+//                if let holder7 = holder6 {
+//                    holder3 = holder7
+//                }
+//
                 //print(holder2)
                 //print(holder3)
                 
@@ -167,20 +169,34 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func addCustomFood(name: String, months: String, days: String) {
         
+        //print(months)
         var months4: Int?
-        var days4: Int?
+        var days4: String?
+        var months5: Int
         let newFoodCoreDataIem = CoreDataHelper.newFood()
         newFoodCoreDataIem.name = name
         
-        let months3 = months
-        months4 = Int(months3)
+        
+        months4 = Int((months))
+        
+        guard let theHolder = months4 else { return }
+        
+        
         let days3 = days
-        days4 = Int(days3)
+        days4 = days3
         
+        //print(days4)
+        //print(months4)
+        //print(days4)
         
-        let totalTime = months4! + (days4!/30)
-        let totalTime2 = totalTime
-        newFoodCoreDataIem.expiration = "\(totalTime2) months"
+        if days4 == "days" {
+            //print("\(days4) days")
+            print("\(theHolder) days")
+            newFoodCoreDataIem.expiration = "\(months4!) days"
+        } else {
+             print("\(theHolder) months")
+             newFoodCoreDataIem.expiration = "\(months4!) months"
+        }
 
         
         CoreDataHelper.saveFood()
