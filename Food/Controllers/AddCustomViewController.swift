@@ -65,6 +65,7 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         if let newCharacterName = typeInFoodTextField.text {
             character = newCharacterName
         }
+    
         
        
         numMonths = numbers2[pickerView2.selectedRow(inComponent: 0)]

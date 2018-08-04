@@ -17,6 +17,7 @@
 		B869B6E4210689E1005B5EC5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869B6E3210689E1005B5EC5 /* SearchViewController.swift */; };
 		B869B6E821068A7F005B5EC5 /* SearchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B869B6E721068A7F005B5EC5 /* SearchScreen.storyboard */; };
 		B8799E5521111FAD0058356C /* CountdownHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8799E5421111FAD0058356C /* CountdownHelper.swift */; };
+		B8799E84211507D80058356C /* EditFridgeItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8799E83211507D80058356C /* EditFridgeItemViewController.swift */; };
 		B87FCBF8210F83F50017B9F6 /* AddCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FCBF7210F83F50017B9F6 /* AddCustomViewController.swift */; };
 		B8C47D59210694420007CC31 /* ExpirationDateScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D58210694420007CC31 /* ExpirationDateScreen.storyboard */; };
 		B8C47D5B210694630007CC31 /* ExpirationDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D5A210694630007CC31 /* ExpirationDateViewController.swift */; };
@@ -44,6 +45,7 @@
 		B869B6E3210689E1005B5EC5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B869B6E721068A7F005B5EC5 /* SearchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchScreen.storyboard; sourceTree = "<group>"; };
 		B8799E5421111FAD0058356C /* CountdownHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownHelper.swift; sourceTree = "<group>"; };
+		B8799E83211507D80058356C /* EditFridgeItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFridgeItemViewController.swift; sourceTree = "<group>"; };
 		B87FCBF7210F83F50017B9F6 /* AddCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomViewController.swift; sourceTree = "<group>"; };
 		B8C47D58210694420007CC31 /* ExpirationDateScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpirationDateScreen.storyboard; sourceTree = "<group>"; };
 		B8C47D5A210694630007CC31 /* ExpirationDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDateViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				B869B6E3210689E1005B5EC5 /* SearchViewController.swift */,
 				B8C47D5A210694630007CC31 /* ExpirationDateViewController.swift */,
 				B87FCBF7210F83F50017B9F6 /* AddCustomViewController.swift */,
+				B8799E83211507D80058356C /* EditFridgeItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				B8C47D5B210694630007CC31 /* ExpirationDateViewController.swift in Sources */,
 				B87FCBF8210F83F50017B9F6 /* AddCustomViewController.swift in Sources */,
 				B8C47D632107BD460007CC31 /* ExpirationDateTableViewCell.swift in Sources */,
+				B8799E84211507D80058356C /* EditFridgeItemViewController.swift in Sources */,
 				B8C47D702108E76E0007CC31 /* Food.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

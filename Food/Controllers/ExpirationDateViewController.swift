@@ -66,11 +66,18 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
                 
                 otherViewController.delegate = self
                 CoreDataHelper.saveFood()
+            case "toEditVC":
+                print("hi")
             default:
                 break
             }
         }
     }
+    
+    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        
+    }
+
    
     
 //    var foodName:String = ""
