@@ -27,12 +27,9 @@
 		B8C47D6D2108DFC10007CC31 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D6C2108DFC10007CC31 /* CoreDataHelper.swift */; };
 		B8C47D702108E76E0007CC31 /* Food.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D6E2108E76E0007CC31 /* Food.xcdatamodeld */; };
 		B8C47D7621091C2D0007CC31 /* FoodPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D7521091C2D0007CC31 /* FoodPlist.swift */; };
-		F09F9F5E35DF3B1BE807092C /* Pods_Food.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E3219009F41578D39F5344 /* Pods_Food.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		62181A17AB9789949B7F8B72 /* Pods-Food.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Food/Pods-Food.debug.xcconfig"; sourceTree = "<group>"; };
-		70E3219009F41578D39F5344 /* Pods_Food.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Food.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B869B6C4210659C1005B5EC5 /* Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B869B6C7210659C1005B5EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B869B6C9210659C1005B5EC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +52,6 @@
 		B8C47D6C2108DFC10007CC31 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		B8C47D6F2108E76E0007CC31 /* Food.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food.xcdatamodel; sourceTree = "<group>"; };
 		B8C47D7521091C2D0007CC31 /* FoodPlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPlist.swift; sourceTree = "<group>"; };
-		D3EDF4977E505FA6980D1264 /* Pods-Food.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Food.release.xcconfig"; path = "Pods/Target Support Files/Pods-Food/Pods-Food.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,37 +59,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F09F9F5E35DF3B1BE807092C /* Pods_Food.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4CCFB3755B29D57F9C1E8615 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				62181A17AB9789949B7F8B72 /* Pods-Food.debug.xcconfig */,
-				D3EDF4977E505FA6980D1264 /* Pods-Food.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		507EFA1FA195B01949432E1C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				70E3219009F41578D39F5344 /* Pods_Food.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B869B6BB210659C1005B5EC5 = {
 			isa = PBXGroup;
 			children = (
 				B869B6C6210659C1005B5EC5 /* Food */,
 				B869B6C5210659C1005B5EC5 /* Products */,
-				4CCFB3755B29D57F9C1E8615 /* Pods */,
-				507EFA1FA195B01949432E1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,11 +156,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B869B6D9210659C2005B5EC5 /* Build configuration list for PBXNativeTarget "Food" */;
 			buildPhases = (
-				10446E17F1B7A710B19F107A /* [CP] Check Pods Manifest.lock */,
 				B869B6C0210659C1005B5EC5 /* Sources */,
 				B869B6C1210659C1005B5EC5 /* Frameworks */,
 				B869B6C2210659C1005B5EC5 /* Resources */,
-				C4798C4B56137C8283E1BA4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,45 +218,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		10446E17F1B7A710B19F107A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Food-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4798C4B56137C8283E1BA4C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Food/Pods-Food-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/VACalendar/VACalendar.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VACalendar.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Food/Pods-Food-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B869B6C0210659C1005B5EC5 /* Sources */ = {
@@ -443,7 +378,6 @@
 		};
 		B869B6DA210659C2005B5EC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62181A17AB9789949B7F8B72 /* Pods-Food.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,7 +396,6 @@
 		};
 		B869B6DB210659C2005B5EC5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3EDF4977E505FA6980D1264 /* Pods-Food.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

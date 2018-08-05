@@ -33,6 +33,9 @@ struct CoreDataHelper {
         
         let holder = food.expiration!
         var convertingExpirationDate = holder
+        if convertingExpirationDate == "0" {
+            convertingExpirationDate = "0 days"
+        }
         let fullname = convertingExpirationDate
         let fullnamearr = fullname.components(separatedBy: " ")
         print("\(fullnamearr[0])")

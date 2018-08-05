@@ -20,6 +20,9 @@ import UIKit
 
 
 class ExpirationDateTableViewController: UITableViewController, SearchViewControllerDelegate {
+    
+    var x: String!
+    
     func passFood(string: String) {
         print("sup")
     }
@@ -66,8 +69,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
                 
                 otherViewController.delegate = self
                 CoreDataHelper.saveFood()
-            case "toEditVC":
-                print("hi")
+//            case "toEditVC":
+//                print("hi")
             default:
                 break
             }
@@ -228,6 +231,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 //        let holder = "\(timeDifference.month!) Months \(timeDifference.day!) Days left"
 //        textLabel.text = holder
 //    }
+    
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let foodToDelete = fridge[indexPath.row]
@@ -239,6 +244,11 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 //            self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    
+   
+    
+    
     
     
     

@@ -17,14 +17,19 @@ class EditFridgeItemViewController: UIViewController {
     
     @IBOutlet weak var editNameTextField: UITextField!
     
+    var passedValue: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        editNameTextField.text = passedValue
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        editNameTextField.text = "Sf"
+        editNameTextField.text = ""
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
@@ -33,8 +38,8 @@ class EditFridgeItemViewController: UIViewController {
         case "update":
             print("update bar button item tapped")
             
-            let destination = segue.destination as! ExpirationDateTableViewController
-            destination.fridge.
+//            let destination = segue.destination as! ExpirationDateTableViewController
+//            destination.fridge.
         
             
         default:

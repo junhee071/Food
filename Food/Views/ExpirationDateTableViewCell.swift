@@ -19,10 +19,14 @@ class ExpirationDateTableViewCell: UITableViewCell {
         
     }
     
+
+
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
     }
+    
 //    func printTime(holder: Date) {
 //        let formatter = DateFormatter()
 //        let userCalendar = Calendar.current
@@ -36,6 +40,8 @@ class ExpirationDateTableViewCell: UITableViewCell {
     
     private var timer: Timer?
     private var timeCounter: Double = 0
+    
+    
     
     var expiryTimeInterval: TimeInterval? {
         didSet {
