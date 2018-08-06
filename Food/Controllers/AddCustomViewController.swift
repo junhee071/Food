@@ -12,6 +12,8 @@ import UIKit
 
 class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    
+    
     var character: String!
     var numMonths: String!
     var monthss: String!
@@ -146,4 +148,6 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     //        }
     //    }
 }
+
+
 

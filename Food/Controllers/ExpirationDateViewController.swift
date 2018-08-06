@@ -22,7 +22,10 @@ import UIKit
 class ExpirationDateTableViewController: UITableViewController, SearchViewControllerDelegate {
     
     var x: String!
-    
+    var holder: String = ""
+    var holder2: String = ""
+    var holder3: String = ""
+    var individualTaskTimer = Timer()
     func passFood(string: String) {
         print("sup")
     }
@@ -77,10 +80,74 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         }
     }
     
-    @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
-        
+    @IBAction func unwindWithSegue(_ sender: UIStoryboardSegue) {
+        if sender.source is EditFridgeItemViewController {
+            if let senderVC = sender.source as? EditFridgeItemViewController {
+                let holder4 = senderVC.character
+                holder = holder4!
+                
+                let holder5 = senderVC.numMonths
+                holder2 = holder5!
+                //                let holder5 = senderVC.numMonths
+                //                if let holder8 = holder5 {
+                //                    holder2 = holder8
+                //                }
+                
+                
+                let holder6 = senderVC.numDays
+                holder3 = holder6!
+                //                if let holder7 = holder6 {
+                //                    holder3 = holder7
+                //                }
+                //
+                //print(holder2)
+                //print(holder3)
+                
+                //print("\(holder2) supeup")
+                //print(holder3)
+                addCustomFood(name: holder, months: holder2, days: holder3)
+                
+            }
+        }
     }
-
+        //let newFoodCoreDataItem = CoreDataHelper.newFood()
+        //newFoodCoreDataItem.name =
+    
+    func addCustomFood(name: String, months: String, days: String) {
+        var months4: Int?
+        var days4: String?
+        var months5: Int
+        let newFoodCoreDataIem = CoreDataHelper.newFood()
+        newFoodCoreDataIem.name = name
+        
+        
+        months4 = Int((months))
+        
+        guard let theHolder = months4 else { return }
+        
+        
+        let days3 = days
+        days4 = days3
+        
+        //print(days4)
+        //print(months4)
+        //print(days4)
+        
+        if days4 == "days" {
+            //print("\(days4) days")
+            print("\(theHolder) days")
+            newFoodCoreDataIem.expiration = "\(months4!) days"
+        } else {
+            print("\(theHolder) months")
+            newFoodCoreDataIem.expiration = "\(months4!) months"
+        }
+        
+        CoreDataHelper.saveFood()
+        
+        let fridgeItem = CoreDataHelper.newFridgeItem(food: newFoodCoreDataIem)
+        fridge.append(fridgeItem)
+        tableView.reloadData()
+    }
    
     
 //    var foodName:String = ""
@@ -115,7 +182,19 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     
     override func viewWillAppear(_ animated: Bool) {
         fridge = CoreDataHelper.retrieveFridgeItems()
+        
+//        NotificationCenter.defaultCenter().addObserver(self, selector: "activeAgain", name: "UIApplicationDidBecomeActiveNotification", object: nil),
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "goingAway", name: "UIApplicationWillResignActiveNotification", object: nil)
+
     }
+    
+    
+    
+    func goingAway() {
+        individualTaskTimer.invalidate()
+    }
+    
+    
     override func didReceiveMemoryWarning() {
          super.didReceiveMemoryWarning()
     }
@@ -244,6 +323,13 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
 //            self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
+    
+        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let x = indexPath
+    }
+    
     
     
    

@@ -45,7 +45,7 @@
                                 <connections>
                                     <outlet property="expirationTimeLabel" destination="WEd-PL-SLx" id="yd5-qO-nGd"/>
                                     <outlet property="foodNameLabel" destination="RsZ-iD-dZP" id="NnO-Tp-1Ds"/>
-                                    <segue destination="SI2-3h-ncR" kind="show" identifier="toEditVC" id="luR-ZE-K5p"/>
+                                    <segue destination="SI2-3h-ncR" kind="show" id="WSh-lW-Tck"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -85,7 +85,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="SI2-3h-ncR" eventType="touchUpInside" id="ddy-Vq-GfX"/>
-                                    <segue destination="lYP-Qz-alU" kind="unwind" identifier="update" unwindAction="unwindWithSegue:" id="wJf-ec-0DX"/>
+                                    <segue destination="lYP-Qz-alU" kind="unwind" unwindAction="unwindWithSegue:" id="VcH-a1-Kmz"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvF-9U-M48">

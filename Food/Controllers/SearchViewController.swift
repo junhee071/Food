@@ -53,6 +53,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         searchBar?.delegate = self
         foodTableView.delegate = self
         foodTableView.dataSource = self
+        
+        
     }
     
     
@@ -136,6 +138,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.performSegue(withIdentifier: "showCustom", sender: nil)
     }
     
+   
     
     @IBAction func unwindWithSegue(_ sender: UIStoryboardSegue) {
         if sender.source is AddCustomViewController {
@@ -163,6 +166,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 //print("\(holder2) supeup")
                 //print(holder3)
                 addCustomFood(name: holder, months: holder2, days: holder3)
+                
             }
         }
     }
