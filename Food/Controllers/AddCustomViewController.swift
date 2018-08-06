@@ -64,6 +64,7 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let newCharacterName = typeInFoodTextField.text {
             character = newCharacterName
+            character = character.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
     
         
