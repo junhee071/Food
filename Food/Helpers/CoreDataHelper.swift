@@ -38,12 +38,10 @@ struct CoreDataHelper {
         }
         let fullname = convertingExpirationDate
         let fullnamearr = fullname.components(separatedBy: " ")
-        print("\(fullnamearr[0])")
         var a: Int = 0
         if let firstname: String = fullnamearr[0] {
             a = Int(firstname)!
             
-            print(firstname)
         }
         var lastname: String = fullnamearr[1]
         

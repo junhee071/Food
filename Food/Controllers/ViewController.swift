@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             a = a * 2419200
             
         default:
-            print("suck me")
+            print("0")
         }
         
         let s5 = NSDate(timeIntervalSinceNow: TimeInterval(a)) // it means one minute (60 seconds) before the current time

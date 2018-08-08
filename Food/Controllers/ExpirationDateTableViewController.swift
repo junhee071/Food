@@ -29,14 +29,12 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     var individualTaskTimer = Timer()
     var final: String = ""
     func passFood(string: String) {
-        print("sup")
     }
     
     
     
     
     func search(_ viewController: SearchViewController, didSelectANew food: Food) {
-        print("helloooo")
         let fridgeItem = CoreDataHelper.newFridgeItem(food: food)
         fridge.append(fridgeItem)
 //        viewController.s
@@ -90,7 +88,6 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
                     let indexPath = IndexPath(item: 0, section: 0)
                     if cell.name == final {
                         tableView.reloadData()
-                        print(fridge.count)
                         
                         CoreDataHelper.delete(fridgeItem: fridge[indexPath.row])
 
@@ -186,8 +183,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let num = 245
-        print("The number is \(num)")
+        
         
     UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 15.0)!], for: .normal)
         

@@ -16,9 +16,10 @@
 		B869B6E221067A23005B5EC5 /* StartingScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869B6E121067A23005B5EC5 /* StartingScreenController.swift */; };
 		B869B6E4210689E1005B5EC5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869B6E3210689E1005B5EC5 /* SearchViewController.swift */; };
 		B869B6E821068A7F005B5EC5 /* SearchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B869B6E721068A7F005B5EC5 /* SearchScreen.storyboard */; };
-		B8799E5521111FAD0058356C /* CountdownHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8799E5421111FAD0058356C /* CountdownHelper.swift */; };
 		B8799E84211507D80058356C /* EditFridgeItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8799E83211507D80058356C /* EditFridgeItemViewController.swift */; };
 		B87FCBF8210F83F50017B9F6 /* AddCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87FCBF7210F83F50017B9F6 /* AddCustomViewController.swift */; };
+		B89AE5DB211B93020054D8BC /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AE5DA211B93020054D8BC /* GameKit.framework */; };
+		B89AE5DD211B93060054D8BC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89AE5DC211B93060054D8BC /* StoreKit.framework */; };
 		B8C47D59210694420007CC31 /* ExpirationDateScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C47D58210694420007CC31 /* ExpirationDateScreen.storyboard */; };
 		B8C47D5B210694630007CC31 /* ExpirationDateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D5A210694630007CC31 /* ExpirationDateTableViewController.swift */; };
 		B8C47D632107BD460007CC31 /* ExpirationDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C47D622107BD460007CC31 /* ExpirationDateTableViewCell.swift */; };
@@ -41,9 +42,10 @@
 		B869B6E121067A23005B5EC5 /* StartingScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingScreenController.swift; sourceTree = "<group>"; };
 		B869B6E3210689E1005B5EC5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B869B6E721068A7F005B5EC5 /* SearchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchScreen.storyboard; sourceTree = "<group>"; };
-		B8799E5421111FAD0058356C /* CountdownHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownHelper.swift; sourceTree = "<group>"; };
 		B8799E83211507D80058356C /* EditFridgeItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFridgeItemViewController.swift; sourceTree = "<group>"; };
 		B87FCBF7210F83F50017B9F6 /* AddCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomViewController.swift; sourceTree = "<group>"; };
+		B89AE5DA211B93020054D8BC /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		B89AE5DC211B93060054D8BC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B8C47D58210694420007CC31 /* ExpirationDateScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpirationDateScreen.storyboard; sourceTree = "<group>"; };
 		B8C47D5A210694630007CC31 /* ExpirationDateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDateTableViewController.swift; sourceTree = "<group>"; };
 		B8C47D622107BD460007CC31 /* ExpirationDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpirationDateTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89AE5DB211B93020054D8BC /* GameKit.framework in Frameworks */,
+				B89AE5DD211B93060054D8BC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 			children = (
 				B869B6C6210659C1005B5EC5 /* Food */,
 				B869B6C5210659C1005B5EC5 /* Products */,
+				B89AE5D9211B93020054D8BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +128,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		B89AE5D9211B93020054D8BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B89AE5DC211B93060054D8BC /* StoreKit.framework */,
+				B89AE5DA211B93020054D8BC /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8C47D612107BD190007CC31 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +158,6 @@
 			children = (
 				B8C47D692107F2590007CC31 /* DatabaseHelper.swift */,
 				B8C47D6C2108DFC10007CC31 /* CoreDataHelper.swift */,
-				B8799E5421111FAD0058356C /* CountdownHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -181,6 +194,14 @@
 				TargetAttributes = {
 					B869B6C3210659C1005B5EC5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -225,7 +246,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C47D6D2108DFC10007CC31 /* CoreDataHelper.swift in Sources */,
-				B8799E5521111FAD0058356C /* CountdownHelper.swift in Sources */,
 				B8C47D6A2107F2590007CC31 /* DatabaseHelper.swift in Sources */,
 				B869B6E4210689E1005B5EC5 /* SearchViewController.swift in Sources */,
 				B869B6CA210659C1005B5EC5 /* ViewController.swift in Sources */,
@@ -380,15 +400,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer: junhee071@gmail.com (4H7TD85SU6)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z8383B8PH4;
 				INFOPLIST_FILE = Food/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MakeSchool.Food;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MakeSchool.Frozone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7ab923e3-bb87-465d-be09-003e89913e8d";
+				PROVISIONING_PROFILE_SPECIFIER = FrozoneDevelopmentProfile;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -398,15 +421,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jun Hee Han (Z8383B8PH4)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z8383B8PH4;
 				INFOPLIST_FILE = Food/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MakeSchool.Food;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MakeSchool.Frozone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = FrozoneDistributionProfile;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

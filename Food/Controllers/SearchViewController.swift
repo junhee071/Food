@@ -93,8 +93,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //            food = DatabaseHelper.getFood(for: (subjectCell.textLabel?.text)!)
             food = foodsArray[indexPath.row]
             if let foundFood = food {
-                print("hi")
-                print(foundFood)
                 self.delegate?.search(self, didSelectANew: foundFood)
             
             } else {
@@ -260,7 +258,6 @@ extension SearchViewController: UISearchBarDelegate {
             
             request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
             foodsArray = CoreDataHelper.loadFoods(with: request)
-            print(foodsArray.count)
             foodTableView.reloadData()
         }
     }
