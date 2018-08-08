@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,12 +15,12 @@
         <scene sceneID="Hkr-P9-wIf">
             <objects>
                 <tableViewController storyboardIdentifier="ExpirationDateTableViewController" id="Lem-wY-vUX" customClass="ExpirationDateTableViewController" customModule="Food" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YML-7x-DVc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YML-7x-DVc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.16470588235294117" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="expirationTableViewCell" rowHeight="60" id="aNC-jW-D6Q" customClass="ExpirationDateTableViewCell" customModule="Food" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="expirationTableViewCell" rowHeight="60" id="aNC-jW-D6Q" customClass="ExpirationDateTableViewCell" customModule="Food" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aNC-jW-D6Q" id="6sG-gU-mKB">
@@ -30,21 +31,21 @@
                                             <rect key="frame" x="16" y="3" width="235" height="56"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="16"/>
-                                            <color key="textColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.8666666666666667" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="days left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjS-fP-8K9">
-                                            <rect key="frame" x="313" y="22" width="78" height="21"/>
+                                            <rect key="frame" x="309" y="22" width="78" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-PL-SLx">
-                                            <rect key="frame" x="271" y="15" width="46" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEd-PL-SLx">
+                                            <rect key="frame" x="255" y="15" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="21"/>
-                                            <color key="textColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.8666666666666667" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -63,7 +64,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Food" id="r54-qH-BBD">
-                        <barButtonItem key="leftBarButtonItem" title="Manual Search" id="oZH-MR-YfK">
+                        <barButtonItem key="leftBarButtonItem" title="Add Food" id="oZH-MR-YfK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="manualSearchPressed:" destination="Lem-wY-vUX" id="hD4-P5-vVz"/>
@@ -89,9 +90,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCh-bE-Sx6">
-                                <rect key="frame" x="46" y="540" width="298" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCh-bE-Sx6">
+                                <rect key="frame" x="131" y="526" width="113" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="N95-Iw-Sau"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                 <state key="normal" title="Add to fridge!">
                                     <color key="titleColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -100,38 +104,55 @@
                                     <segue destination="lYP-Qz-alU" kind="unwind" unwindAction="unwindWithSegue:" id="VcH-a1-Kmz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvF-9U-M48">
-                                <rect key="frame" x="16" y="142" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvF-9U-M48">
+                                <rect key="frame" x="16" y="136" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J9P-J5-AIf">
-                                <rect key="frame" x="174" y="310" width="185" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDO-mK-uIO">
-                                <rect key="frame" x="155" y="110" width="189" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDO-mK-uIO">
+                                <rect key="frame" x="155" y="94" width="83" height="24"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Expiration Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-6f-uwb">
-                                <rect key="frame" x="113" y="246" width="148" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Expiration Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-6f-uwb">
+                                <rect key="frame" x="116" y="229" width="160" height="24"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-P2-rdb">
-                                <rect key="frame" x="0.0" y="310" width="212" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-P2-rdb">
+                                <rect key="frame" x="16" y="292" width="139" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="4BN-kR-SGo"/>
+                                    <constraint firstAttribute="height" constant="162" id="9gk-2b-HiY"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9P-J5-AIf">
+                                <rect key="frame" x="229" y="292" width="117" height="162"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.16470588235294117" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="UDO-mK-uIO" firstAttribute="leading" secondItem="4uX-tj-NvH" secondAttribute="leading" constant="155" id="2Tx-dm-IDZ"/>
+                            <constraint firstItem="J9P-J5-AIf" firstAttribute="top" secondItem="0Wg-P2-rdb" secondAttribute="top" id="6u2-m0-7Mb"/>
+                            <constraint firstItem="TYK-6f-uwb" firstAttribute="top" secondItem="tvF-9U-M48" secondAttribute="bottom" constant="63" id="IYp-ja-0Q0"/>
+                            <constraint firstItem="tvF-9U-M48" firstAttribute="trailing" secondItem="7sG-y9-8EN" secondAttribute="trailingMargin" id="Iae-Jh-KjW"/>
+                            <constraint firstItem="J9P-J5-AIf" firstAttribute="bottom" secondItem="0Wg-P2-rdb" secondAttribute="bottom" id="M5Y-Rg-lVi"/>
+                            <constraint firstItem="4uX-tj-NvH" firstAttribute="trailing" secondItem="UDO-mK-uIO" secondAttribute="trailing" constant="137" id="Ob9-US-lY8"/>
+                            <constraint firstItem="tvF-9U-M48" firstAttribute="top" secondItem="UDO-mK-uIO" secondAttribute="bottom" constant="18" id="Pb3-lJ-isn"/>
+                            <constraint firstItem="J9P-J5-AIf" firstAttribute="top" secondItem="TYK-6f-uwb" secondAttribute="bottom" constant="39" id="R3d-FA-H7G"/>
+                            <constraint firstItem="tvF-9U-M48" firstAttribute="leading" secondItem="7sG-y9-8EN" secondAttribute="leadingMargin" id="RSp-Dp-1oZ"/>
+                            <constraint firstItem="TYK-6f-uwb" firstAttribute="centerX" secondItem="UDO-mK-uIO" secondAttribute="centerX" id="T7n-Y6-BiL"/>
+                            <constraint firstItem="iCh-bE-Sx6" firstAttribute="centerX" secondItem="tvF-9U-M48" secondAttribute="centerX" id="XxP-Lb-Ab7"/>
+                            <constraint firstItem="0Wg-P2-rdb" firstAttribute="leading" secondItem="tvF-9U-M48" secondAttribute="leading" id="bNZ-bB-LWP"/>
+                            <constraint firstItem="UDO-mK-uIO" firstAttribute="top" secondItem="4uX-tj-NvH" secondAttribute="top" constant="30" id="biI-mh-i1c"/>
+                            <constraint firstItem="iCh-bE-Sx6" firstAttribute="top" secondItem="J9P-J5-AIf" secondAttribute="bottom" constant="72" id="h3g-Eh-SgO"/>
+                            <constraint firstItem="4uX-tj-NvH" firstAttribute="trailing" secondItem="J9P-J5-AIf" secondAttribute="trailing" constant="29" id="m9W-oS-D9M"/>
+                            <constraint firstItem="J9P-J5-AIf" firstAttribute="leading" secondItem="0Wg-P2-rdb" secondAttribute="trailing" constant="74" id="ry0-qD-OoO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4uX-tj-NvH"/>
                     </view>
                     <connections>

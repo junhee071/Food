@@ -58,7 +58,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let attributes = [NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 18)!, NSAttributedStringKey.foregroundColor : UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = attributes
 
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 15.0)!], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 9.0)!], for: .normal)
 //        let imageView = UIImageView(image: UIImage(named: "background1"))
 //        imageView.frame = self.foodTableView.frame
 //        self.foodTableView.backgroundView = imageView

@@ -21,6 +21,7 @@ import UIKit
 
 class ExpirationDateTableViewController: UITableViewController, SearchViewControllerDelegate {
     
+    var hold: Int = 0
     var x: String!
     var holder: String = ""
     var holder2: String = ""
@@ -188,7 +189,9 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         let num = 245
         print("The number is \(num)")
         
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 15.0)!], for: .normal)
+    UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 15.0)!], for: .normal)
+        
+        
 //        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(printTime), userInfo: nil, repeats: true)
 //        timer.fire()
 
@@ -273,6 +276,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "expirationTableViewCell", for: indexPath) as! ExpirationDateTableViewCell
         
+        //cell.selectionStyle = UITableViewCellSelectionStyle
         
         let foodForTheCurrentIndexPath = fridge[indexPath.row]
 
@@ -285,6 +289,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         
        
         cell.expirationTimeLabel.text = "\(timer)"
+        
+        
         
         
         //5433200

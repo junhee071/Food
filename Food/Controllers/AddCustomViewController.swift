@@ -34,11 +34,13 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     @IBOutlet weak var doneButton: UIButton!
     
     let numbers = ["days","months"]
-    let numbers2 = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+    let numbers2 = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+
         pickerView1.tag = 1
         pickerView2.tag = 2
         
@@ -49,9 +51,9 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         pickerView2.dataSource = self
         
         
-        pickerView1.setValue(#colorLiteral(red: 0.3019607843, green: 0.8, blue: 0.4078431373, alpha: 1), forKeyPath: "textColor")
+        pickerView1.setValue(#colorLiteral(red: 0.3019607843, green: 0.8941176471, blue: 0.4078431373, alpha: 1), forKeyPath: "textColor")
 
-        pickerView2.setValue(#colorLiteral(red: 0.3019607843, green: 0.8, blue: 0.4078431373, alpha: 1), forKeyPath: "textColor")
+        pickerView2.setValue(#colorLiteral(red: 0.3019607843, green: 0.8941176471, blue: 0.4078431373, alpha: 1), forKeyPath: "textColor")
         
         typeInFoodTextField.layer.borderColor = UIColor.white.cgColor
         typeInFoodTextField.layer.borderWidth = 1.0
@@ -143,6 +145,20 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         
     }
     
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        if pickerView.tag == 2 {
+            let stringData = numbers2
+            let myFont = NSAttributedString(string: stringData[row], attributes: [NSAttributedStringKey.foregroundColor:#colorLiteral(red: 0.3019607843, green: 1, blue: 0.4078431373, alpha: 1)])
+            return myFont
+        } else {
+            let stringData = numbers
+            let myFont = NSAttributedString(string: stringData[row], attributes: [NSAttributedStringKey.foregroundColor:#colorLiteral(red: 0.3019607843, green: 1, blue: 0.4078431373, alpha: 1)])
+            return myFont
+        }
+        
+    }
+    
     //months pickerview
 //    func numberOfComponents2(in pickerView2: UIPickerView) -> Int {
 //        return 1
@@ -170,6 +186,16 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
 }
 
 
-
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 
 

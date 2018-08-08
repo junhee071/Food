@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            window?.makeKeyAndVisible()
 //        }
         DatabaseHelper.populateDataBaseWithDefaultFoodData()
-        
+        UINavigationBar.appearance().tintColor = UIColor.white
         
         
         return true

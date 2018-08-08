@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,9 +19,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mcQ-e3-vWv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mcQ-e3-vWv">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.16470588235294117" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="86" id="oWT-Dy-Gay">
                                         <rect key="frame" x="0.0" y="28" width="375" height="86"/>
@@ -52,7 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="nfw-yI-IZY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="Ppb-Yo-tvY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KjB-k6-pmD">
+                        <barButtonItem key="rightBarButtonItem" title="Add Custom" id="KjB-k6-pmD">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addCustomButtonTapped:" destination="MRm-xG-3EY" id="rZc-GN-XSK"/>
@@ -78,40 +79,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Custom Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-xl-8aa">
-                                <rect key="frame" x="107" y="79" width="199" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Custom Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-xl-8aa">
+                                <rect key="frame" x="107" y="85" width="199" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ozn-Nn-mmP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHs-4C-0cK">
-                                <rect key="frame" x="16" y="147" width="343" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHs-4C-0cK">
+                                <rect key="frame" x="16" y="153" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="o2O-CJ-2SJ"/>
+                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-u3-VS4">
-                                <rect key="frame" x="41" y="240" width="112" height="269"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-u3-VS4">
+                                <rect key="frame" x="40" y="252" width="112" height="269"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="269" id="DpJ-NP-RZ6"/>
+                                    <constraint firstAttribute="width" constant="112" id="ikf-4x-52S"/>
+                                </constraints>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m38-3q-8Mk">
-                                <rect key="frame" x="216" y="240" width="110" height="269"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Expiration Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQL-hB-Rbw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Expiration Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQL-hB-Rbw">
                                 <rect key="frame" x="107" y="240" width="160" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                 <color key="textColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-KT-orq" userLabel="Done Button">
-                                <rect key="frame" x="29" y="527" width="317" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="18"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-KT-orq" userLabel="Done Button">
+                                <rect key="frame" x="29" y="544" width="317" height="49"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                 <state key="normal" title="Add to fridge!">
                                     <color key="titleColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -120,8 +122,31 @@
                                     <segue destination="flJ-x3-x6e" kind="unwind" unwindAction="unwindWithSegue:" id="Vyx-FL-9J0"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m38-3q-8Mk">
+                                <rect key="frame" x="236" y="252" width="110" height="269"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.16470588235294117" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aQL-hB-Rbw" firstAttribute="top" secondItem="GHs-4C-0cK" secondAttribute="bottom" constant="53" id="0dC-Qg-veD"/>
+                            <constraint firstItem="m38-3q-8Mk" firstAttribute="leading" secondItem="A2g-u3-VS4" secondAttribute="trailing" constant="64" id="2gq-1V-TFt"/>
+                            <constraint firstItem="m38-3q-8Mk" firstAttribute="top" secondItem="A2g-u3-VS4" secondAttribute="top" id="LUH-e3-rg0"/>
+                            <constraint firstItem="8bC-mV-xrm" firstAttribute="bottom" secondItem="uuV-KT-orq" secondAttribute="bottom" constant="74" id="P1z-Es-7vR"/>
+                            <constraint firstItem="2xe-xl-8aa" firstAttribute="leading" secondItem="8bC-mV-xrm" secondAttribute="leading" constant="107" id="T0M-K5-MDx"/>
+                            <constraint firstItem="A2g-u3-VS4" firstAttribute="leading" secondItem="8bC-mV-xrm" secondAttribute="leading" constant="40" id="asD-cc-h8D"/>
+                            <constraint firstItem="8bC-mV-xrm" firstAttribute="trailing" secondItem="2xe-xl-8aa" secondAttribute="trailing" constant="69" id="bU8-Dp-tYL"/>
+                            <constraint firstItem="m38-3q-8Mk" firstAttribute="bottom" secondItem="A2g-u3-VS4" secondAttribute="bottom" id="cx1-ut-hYi"/>
+                            <constraint firstItem="2xe-xl-8aa" firstAttribute="top" secondItem="8bC-mV-xrm" secondAttribute="top" constant="21" id="elL-Vq-1ye"/>
+                            <constraint firstItem="8bC-mV-xrm" firstAttribute="trailing" secondItem="m38-3q-8Mk" secondAttribute="trailing" constant="49" id="ep2-VM-pTA"/>
+                            <constraint firstItem="aQL-hB-Rbw" firstAttribute="centerX" secondItem="GHs-4C-0cK" secondAttribute="centerX" id="fKb-3N-1vm"/>
+                            <constraint firstItem="uuV-KT-orq" firstAttribute="centerX" secondItem="aQL-hB-Rbw" secondAttribute="centerX" id="foR-Yv-lIf"/>
+                            <constraint firstItem="A2g-u3-VS4" firstAttribute="top" secondItem="GHs-4C-0cK" secondAttribute="bottom" constant="65" id="fof-df-2fv"/>
+                            <constraint firstItem="aQL-hB-Rbw" firstAttribute="leading" secondItem="2xe-xl-8aa" secondAttribute="leading" id="hli-rS-K49"/>
+                            <constraint firstItem="GHs-4C-0cK" firstAttribute="leading" secondItem="a0A-vo-xnd" secondAttribute="leadingMargin" id="kUX-sA-1qU"/>
+                            <constraint firstItem="uuV-KT-orq" firstAttribute="leading" secondItem="8bC-mV-xrm" secondAttribute="leading" constant="29" id="q8G-7G-HFi"/>
+                            <constraint firstItem="GHs-4C-0cK" firstAttribute="top" secondItem="2xe-xl-8aa" secondAttribute="bottom" constant="8" symbolic="YES" id="rba-jZ-DRi"/>
+                            <constraint firstItem="uuV-KT-orq" firstAttribute="top" secondItem="A2g-u3-VS4" secondAttribute="bottom" constant="23" id="y9o-AX-mze"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8bC-mV-xrm"/>
                     </view>
                     <connections>

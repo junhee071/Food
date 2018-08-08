@@ -27,13 +27,15 @@ class EditFridgeItemViewController: UIViewController, UITextFieldDelegate, UIPic
     @IBOutlet weak var editNameTextField: UITextField!
     
     let numbers = ["days","months"]
-    let numbers2 = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"]
+    let numbers2 = ["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36"]
     
     var passedValue: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+
         editNameTextField.text = passedValue
         
         
@@ -82,6 +84,11 @@ class EditFridgeItemViewController: UIViewController, UITextFieldDelegate, UIPic
         if let newCharacterName = editNameTextField.text {
             character = newCharacterName
             character = character.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            
+            if character == "" {
+                character = "No Name"
+            }
+        
         }
         
         
@@ -133,6 +140,18 @@ class EditFridgeItemViewController: UIViewController, UITextFieldDelegate, UIPic
         }
     }
     
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        if pickerView.tag == 2 {
+            let stringData = numbers2
+            let myFont = NSAttributedString(string: stringData[row], attributes: [NSAttributedStringKey.foregroundColor:#colorLiteral(red: 0.3019607843, green: 1, blue: 0.4078431373, alpha: 1)])
+            return myFont
+        } else {
+        let stringData = numbers
+        let myFont = NSAttributedString(string: stringData[row], attributes: [NSAttributedStringKey.foregroundColor:#colorLiteral(red: 0.3019607843, green: 1, blue: 0.4078431373, alpha: 1)])
+        return myFont
+        }
+        
+    }
     
     @IBAction func doneButtonTapped(_ sender: UIButton) {
     }
