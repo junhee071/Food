@@ -26,6 +26,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     var holder2: String = ""
     var holder3: String = ""
     var individualTaskTimer = Timer()
+    var final: String = ""
     func passFood(string: String) {
         print("sup")
     }
@@ -83,6 +84,16 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     @IBAction func unwindWithSegue(_ sender: UIStoryboardSegue) {
         if sender.source is EditFridgeItemViewController {
             if let senderVC = sender.source as? EditFridgeItemViewController {
+//                for cell in fridge {
+//                    let u = fridge.index(of: cell)!
+//                    let indexPath = IndexPath(item: u, section: 0)
+//                    if cell.name == final {
+                        //fridge.remove(at: u)
+//                        tableView.deleteRows(at: [indexPath], with: .automatic)
+//                    } else { print("nah") }
+//
+//
+//                }
                 let holder4 = senderVC.character
                 holder = holder4!
                 
@@ -157,7 +168,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         let num = 245
         print("The number is \(num)")
         
-        
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 15.0)!], for: .normal)
 //        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(printTime), userInfo: nil, repeats: true)
 //        timer.fire()
 
@@ -250,7 +261,11 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         var stringNumber = foodForTheCurrentIndexPath.expirationDate
        // cell.expiryTimeInterval = numberFromString
         
-        cell.expirationTimeLabel.text = "\(Int((((Double(fridge[indexPath.row].expirationDate)) - Date().timeIntervalSince1970) + 86399)/86400)) days left"
+        var timer = Int((((Double(fridge[indexPath.row].expirationDate)) - Date().timeIntervalSince1970) + 86399)/86400)
+        
+       
+        cell.expirationTimeLabel.text = "\(timer)"
+        
         
         //5433200
 //        cell.printTime(holder: foodForTheCurrentIndexPath.expirationDate!)
@@ -327,8 +342,13 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
     
         
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let x = indexPath
+        let indexPath = tableView.indexPathForSelectedRow
+        let currentCell = tableView.cellForRow(at: indexPath!) as! ExpirationDateTableViewCell
+        final = currentCell.foodNameLabel.text!
+        
     }
+    
+    
     
     
     

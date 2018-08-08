@@ -47,6 +47,23 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         pickerView1.dataSource = self
         pickerView2.delegate = self
         pickerView2.dataSource = self
+        
+        
+        pickerView1.setValue(#colorLiteral(red: 0.3019607843, green: 0.8, blue: 0.4078431373, alpha: 1), forKeyPath: "textColor")
+
+        pickerView2.setValue(#colorLiteral(red: 0.3019607843, green: 0.8, blue: 0.4078431373, alpha: 1), forKeyPath: "textColor")
+        
+        typeInFoodTextField.layer.borderColor = UIColor.white.cgColor
+        typeInFoodTextField.layer.borderWidth = 1.0
+        
+        doneButton.layer.cornerRadius = 5
+        doneButton.layer.borderColor = UIColor.white.cgColor
+        doneButton.layer.borderWidth = 1.0
+        
+        
+        typeInFoodTextField.attributedPlaceholder = NSAttributedString(string: "name",
+                                                               attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        //typeInFoodTextField.isUserInteractionEnabled = true
     }
     
     func textFieldShouldReturn(_ typeInFoodTextField: UITextField) -> Bool {
@@ -67,6 +84,9 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
         if let newCharacterName = typeInFoodTextField.text {
             character = newCharacterName
             character = character.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+            if character == "" {
+                character = "No Name"
+            }
         }
     
         
@@ -148,6 +168,8 @@ class AddCustomViewController: UIViewController, UITextFieldDelegate, UIPickerVi
     //        }
     //    }
 }
+
+
 
 
 

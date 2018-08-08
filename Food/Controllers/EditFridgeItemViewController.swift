@@ -16,6 +16,9 @@ class EditFridgeItemViewController: UIViewController, UITextFieldDelegate, UIPic
     var monthss: String!
     var numDays: String!
     var days: String!
+    var originalName: String!
+    
+    @IBOutlet weak var doneButton: UIButton!
     
     @IBOutlet weak var pickerView1: UIPickerView!
     
@@ -42,6 +45,17 @@ class EditFridgeItemViewController: UIViewController, UITextFieldDelegate, UIPic
         pickerView1.dataSource = self
         pickerView2.delegate = self
         pickerView2.dataSource = self
+        
+        editNameTextField.layer.borderColor = UIColor.white.cgColor
+        editNameTextField.layer.borderWidth = 1.0
+   
+        pickerView1.setValue(#colorLiteral(red: 0.3019607843, green: 0.8, blue: 0.4078431373, alpha: 1), forKeyPath: "textColor")
+        pickerView2.setValue(#colorLiteral(red: 0.3019607843, green: 0.8, blue: 0.4078431373, alpha: 1), forKeyPath: "textColor")
+        
+        doneButton.layer.cornerRadius = 5
+        doneButton.layer.borderColor = UIColor.white.cgColor
+        doneButton.layer.borderWidth = 1.0
+    UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 15.0)!], for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +80,6 @@ class EditFridgeItemViewController: UIViewController, UITextFieldDelegate, UIPic
             character = newCharacterName
             character = character.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         }
-        
         
         
         numMonths = numbers2[pickerView2.selectedRow(inComponent: 0)]

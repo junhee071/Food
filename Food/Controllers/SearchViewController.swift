@@ -54,10 +54,23 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         foodTableView.delegate = self
         foodTableView.dataSource = self
         
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        let attributes = [NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 18)!, NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
+
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 15.0)!], for: .normal)
+//        let imageView = UIImageView(image: UIImage(named: "background1"))
+//        imageView.frame = self.foodTableView.frame
+//        self.foodTableView.backgroundView = imageView
+//        
+//        let navColor = #colorLiteral(red: 0.8862745098, green: 0.5921568627, blue: 0.831372549, alpha: 1)
+//        self.navigationController?.navigationBar.barTintColor = navColor
         
     }
     
     
+    
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodsArray.count
@@ -66,6 +79,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = foodsArray[indexPath.row].name
+        cell.textLabel?.textColor =  #colorLiteral(red: 0.3847525716, green: 0.8256984353, blue: 0.9939522147, alpha: 1)
         return cell
     }
     

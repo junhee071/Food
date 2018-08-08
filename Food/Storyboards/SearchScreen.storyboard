@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="Lwn-Ym-Gm6">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="MRm-xG-3EY" customClass="SearchViewController" customModule="Food" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,29 +29,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="85.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.14117647059999999" green="0.1647058824" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TbB-Pf-MrB">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <color key="barTintColor" red="0.14117647059999999" green="0.1647058824" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.34128372540000002" green="0.28603274080000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="TbB-Pf-MrB" firstAttribute="trailing" secondItem="nfw-yI-IZY" secondAttribute="trailing" id="7rY-vr-FDA"/>
-                            <constraint firstItem="TbB-Pf-MrB" firstAttribute="top" secondItem="nfw-yI-IZY" secondAttribute="top" id="DZV-dc-v14"/>
-                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="top" secondItem="TbB-Pf-MrB" secondAttribute="bottom" id="JdD-Ck-VPN"/>
-                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="top" secondItem="TbB-Pf-MrB" secondAttribute="bottom" id="LVA-bP-6IA"/>
-                            <constraint firstItem="TbB-Pf-MrB" firstAttribute="leading" secondItem="nfw-yI-IZY" secondAttribute="leading" id="LiK-zI-lOh"/>
-                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="leading" secondItem="nfw-yI-IZY" secondAttribute="leading" id="Oa1-6L-eUI"/>
-                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="trailing" secondItem="nfw-yI-IZY" secondAttribute="trailing" id="Ply-Vl-CZk"/>
-                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="bottom" secondItem="nfw-yI-IZY" secondAttribute="bottom" id="XYf-ew-1Da"/>
+                            <constraint firstAttribute="trailing" secondItem="TbB-Pf-MrB" secondAttribute="trailing" id="AuY-Gn-nxX"/>
+                            <constraint firstItem="TbB-Pf-MrB" firstAttribute="leading" secondItem="38j-6K-HiW" secondAttribute="leading" id="B8Y-Ea-zv7"/>
+                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="bottom" secondItem="nfw-yI-IZY" secondAttribute="bottom" id="G7u-Yi-nPr"/>
+                            <constraint firstItem="TbB-Pf-MrB" firstAttribute="top" secondItem="nfw-yI-IZY" secondAttribute="top" id="OFK-IK-VgD"/>
+                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="top" secondItem="TbB-Pf-MrB" secondAttribute="bottom" id="dsp-o6-yfk"/>
+                            <constraint firstItem="TbB-Pf-MrB" firstAttribute="leading" secondItem="mcQ-e3-vWv" secondAttribute="leading" id="l1B-xF-m5T"/>
+                            <constraint firstItem="TbB-Pf-MrB" firstAttribute="trailing" secondItem="mcQ-e3-vWv" secondAttribute="trailing" id="yKa-sg-yTz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nfw-yI-IZY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ppb-Yo-tvY">
+                    <navigationItem key="navigationItem" title="Search" id="Ppb-Yo-tvY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KjB-k6-pmD">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addCustomButtonTapped:" destination="MRm-xG-3EY" id="rZc-GN-XSK"/>
                             </connections>
@@ -66,49 +68,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Rk-rI-bAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719.20000000000005" y="131.78410794602701"/>
+            <point key="canvasLocation" x="1658.4000000000001" y="131.78410794602701"/>
         </scene>
         <!--Add Custom View Controller-->
         <scene sceneID="WeN-dD-9rg">
             <objects>
                 <viewController restorationIdentifier="AddCustomViewController" storyboardIdentifier="AddCustomViewController" id="4HM-nr-VcC" customClass="AddCustomViewController" customModule="Food" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a0A-vo-xnd">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="a0A-vo-xnd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-xl-8aa">
-                                <rect key="frame" x="75" y="83" width="69" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Custom Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-xl-8aa">
+                                <rect key="frame" x="107" y="79" width="199" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHs-4C-0cK">
+                                <rect key="frame" x="16" y="147" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-u3-VS4">
+                                <rect key="frame" x="41" y="240" width="112" height="269"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m38-3q-8Mk">
+                                <rect key="frame" x="216" y="240" width="110" height="269"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Set Expiration Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQL-hB-Rbw">
+                                <rect key="frame" x="107" y="240" width="160" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-KT-orq" userLabel="Done Button">
-                                <rect key="frame" x="134" y="494" width="82" height="127"/>
+                                <rect key="frame" x="29" y="527" width="317" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="18"/>
+                                <state key="normal" title="Add to fridge!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="4HM-nr-VcC" eventType="touchUpInside" id="A6t-vD-Qoe"/>
                                     <segue destination="flJ-x3-x6e" kind="unwind" unwindAction="unwindWithSegue:" id="Vyx-FL-9J0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHs-4C-0cK">
-                                <rect key="frame" x="43" y="240" width="290" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m38-3q-8Mk">
-                                <rect key="frame" x="202" y="346" width="110" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-u3-VS4">
-                                <rect key="frame" x="53" y="346" width="112" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.14117647058823529" green="0.16470588235294117" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="8bC-mV-xrm"/>
                     </view>
                     <connections>
@@ -122,25 +135,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Suu-f4-lY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="flJ-x3-x6e" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1504.8" y="50.824587706146929"/>
+            <point key="canvasLocation" x="2444" y="50.824587706146929"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="MTh-JP-VpM">
+        <scene sceneID="Qq8-dR-eiX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yXM-wz-8nF" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vgC-Gh-40U" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hTF-gz-xvA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MjW-WK-AY8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MRm-xG-3EY" kind="relationship" relationship="rootViewController" id="jo8-ay-58K"/>
+                        <segue destination="MRm-xG-3EY" kind="relationship" relationship="rootViewController" id="r46-7X-DoR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qw8-27-8Xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfY-e6-Lb6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-220" y="131.78410794602701"/>
+            <point key="canvasLocation" x="719.20000000000005" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>
