@@ -55,12 +55,23 @@ struct CoreDataHelper {
         switch whichTimeInterval {
         case "seconds":
             a = x
+        case "day":
+            a = a * 86400
         case "days":
             a = a * 86400
+        case "week":
+            a = a * 604800
         case "weeks":
             a = a * 604800
+        case "month":
+            a = a * 2630200
         case "months":
             a = a * 2630200
+        case "year":
+            a = a * 2630200 * 12
+        case "years":
+            a = a * 2630200 * 12
+            
 
         default:
             print("0 days left")

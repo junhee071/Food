@@ -216,7 +216,7 @@
 		<key>name</key>
 		<string>Capri Sun Kraft</string>
 		<key>expiration</key>
-		<string>18 days (dry mix) 60 days (bottles or pouches)</string>
+		<string>18 days</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -348,7 +348,7 @@
 		<key>name</key>
 		<string>Chicken (canned)</string>
 		<key>expiration</key>
-		<string>2-5 years</string>
+		<string>2 years</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -414,7 +414,7 @@
 		<key>name</key>
 		<string>Chocolate</string>
 		<key>expiration</key>
-		<string>18-24 months</string>
+		<string>18 months</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -451,12 +451,6 @@
 		<string>Coffee (instant)</string>
 		<key>expiration</key>
 		<string>12 months</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Coffee (starbucks) Kraft</string>
-		<key>expiration</key>
-		<string>365</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -558,7 +552,7 @@
 		<key>name</key>
 		<string>Country Time Kraft</string>
 		<key>expiration</key>
-		<string>18 days (dry mix) 60 days (bottles or pouches)</string>
+		<string>18 days</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -690,7 +684,7 @@
 		<key>name</key>
 		<string>Fish (canned)</string>
 		<key>expiration</key>
-		<string>2-5 years</string>
+		<string>2 years</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -948,7 +942,7 @@
 		<key>name</key>
 		<string>Juice- Knudsen Sparkling</string>
 		<key>expiration</key>
-		<string>2 yrs</string>
+		<string>2 years</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -1092,7 +1086,7 @@
 		<key>name</key>
 		<string>Meat (canned)</string>
 		<key>expiration</key>
-		<string>2-5 years</string>
+		<string>2 years</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -1398,7 +1392,7 @@
 		<key>name</key>
 		<string>YooHoo drinks</string>
 		<key>expiration</key>
-		<string>see comments</string>
+		<string>0</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -1620,7 +1614,7 @@
 		<key>name</key>
 		<string>Soups (Del Monte private label soups)</string>
 		<key>expiration</key>
-		<string>12 months*</string>
+		<string>12 months</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -1686,7 +1680,7 @@
 		<key>name</key>
 		<string>Stew (canned)</string>
 		<key>expiration</key>
-		<string>2-5 years</string>
+		<string>4 years</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -1753,12 +1747,6 @@
 		<string>Taco sauce mix</string>
 		<key>expiration</key>
 		<string>2 years</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Tang drink &amp; Health Quenchers   Kraft</string>
-		<key>expiration</key>
-		<string>18 days (dry mix) 60 days (bottles or pouches)</string>
 	</dict>
 	<dict>
 		<key>name</key>

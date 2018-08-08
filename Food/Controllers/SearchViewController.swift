@@ -54,6 +54,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         foodTableView.delegate = self
         foodTableView.dataSource = self
         
+        self.hideKeyboardWhenTappedAround()
+
+        
         self.navigationController?.navigationBar.tintColor = UIColor.white
         let attributes = [NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 18)!, NSAttributedStringKey.foregroundColor : UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = attributes

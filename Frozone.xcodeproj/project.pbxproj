@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B869B6C4210659C1005B5EC5 /* Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B869B6C4210659C1005B5EC5 /* Frozone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frozone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B869B6C7210659C1005B5EC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B869B6C9210659C1005B5EC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B869B6CC210659C1005B5EC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		B869B6C5210659C1005B5EC5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B869B6C4210659C1005B5EC5 /* Food.app */,
+				B869B6C4210659C1005B5EC5 /* Frozone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B869B6C3210659C1005B5EC5 /* Food */ = {
+		B869B6C3210659C1005B5EC5 /* Frozone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B869B6D9210659C2005B5EC5 /* Build configuration list for PBXNativeTarget "Food" */;
+			buildConfigurationList = B869B6D9210659C2005B5EC5 /* Build configuration list for PBXNativeTarget "Frozone" */;
 			buildPhases = (
 				B869B6C0210659C1005B5EC5 /* Sources */,
 				B869B6C1210659C1005B5EC5 /* Frameworks */,
@@ -164,9 +164,9 @@
 			);
 			dependencies = (
 			);
-			name = Food;
+			name = Frozone;
 			productName = Food;
-			productReference = B869B6C4210659C1005B5EC5 /* Food.app */;
+			productReference = B869B6C4210659C1005B5EC5 /* Frozone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -184,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B869B6BF210659C1005B5EC5 /* Build configuration list for PBXProject "Food" */;
+			buildConfigurationList = B869B6BF210659C1005B5EC5 /* Build configuration list for PBXProject "Frozone" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -197,7 +197,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B869B6C3210659C1005B5EC5 /* Food */,
+				B869B6C3210659C1005B5EC5 /* Frozone */,
 			);
 		};
 /* End PBXProject section */
@@ -415,7 +415,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B869B6BF210659C1005B5EC5 /* Build configuration list for PBXProject "Food" */ = {
+		B869B6BF210659C1005B5EC5 /* Build configuration list for PBXProject "Frozone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B869B6D7210659C2005B5EC5 /* Debug */,
@@ -424,7 +424,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B869B6D9210659C2005B5EC5 /* Build configuration list for PBXNativeTarget "Food" */ = {
+		B869B6D9210659C2005B5EC5 /* Build configuration list for PBXNativeTarget "Frozone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B869B6DA210659C2005B5EC5 /* Debug */,
