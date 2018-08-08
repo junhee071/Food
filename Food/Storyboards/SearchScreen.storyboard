@@ -43,8 +43,8 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="TbB-Pf-MrB" secondAttribute="trailing" id="AuY-Gn-nxX"/>
                             <constraint firstItem="TbB-Pf-MrB" firstAttribute="leading" secondItem="38j-6K-HiW" secondAttribute="leading" id="B8Y-Ea-zv7"/>
-                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="bottom" secondItem="nfw-yI-IZY" secondAttribute="bottom" id="G7u-Yi-nPr"/>
                             <constraint firstItem="TbB-Pf-MrB" firstAttribute="top" secondItem="nfw-yI-IZY" secondAttribute="top" id="OFK-IK-VgD"/>
+                            <constraint firstItem="mcQ-e3-vWv" firstAttribute="bottom" secondItem="38j-6K-HiW" secondAttribute="bottom" id="S86-f3-7rX"/>
                             <constraint firstItem="mcQ-e3-vWv" firstAttribute="top" secondItem="TbB-Pf-MrB" secondAttribute="bottom" id="dsp-o6-yfk"/>
                             <constraint firstItem="TbB-Pf-MrB" firstAttribute="leading" secondItem="mcQ-e3-vWv" secondAttribute="leading" id="l1B-xF-m5T"/>
                             <constraint firstItem="TbB-Pf-MrB" firstAttribute="trailing" secondItem="mcQ-e3-vWv" secondAttribute="trailing" id="yKa-sg-yTz"/>
@@ -82,7 +82,7 @@
                                 <rect key="frame" x="107" y="79" width="199" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHs-4C-0cK">
@@ -105,7 +105,7 @@
                                 <rect key="frame" x="107" y="240" width="160" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuV-KT-orq" userLabel="Done Button">
@@ -113,7 +113,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="18"/>
                                 <state key="normal" title="Add to fridge!">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.50196078430000002" green="0.81568627449999997" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="4HM-nr-VcC" eventType="touchUpInside" id="A6t-vD-Qoe"/>

@@ -80,20 +80,38 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
             }
         }
     }
-    
+
     @IBAction func unwindWithSegue(_ sender: UIStoryboardSegue) {
         if sender.source is EditFridgeItemViewController {
             if let senderVC = sender.source as? EditFridgeItemViewController {
-//                for cell in fridge {
-//                    let u = fridge.index(of: cell)!
-//                    let indexPath = IndexPath(item: u, section: 0)
-//                    if cell.name == final {
-                        //fridge.remove(at: u)
-//                        tableView.deleteRows(at: [indexPath], with: .automatic)
-//                    } else { print("nah") }
-//
-//
-//                }
+                for cell in fridge {
+                    let u = fridge.index(of: cell)!
+                    let indexPath = IndexPath(item: 0, section: 0)
+                    if cell.name == final {
+                        tableView.reloadData()
+                        print(fridge.count)
+                        
+                        CoreDataHelper.delete(fridgeItem: fridge[indexPath.row])
+
+                        fridge.remove(at: indexPath.row)
+                        
+                        //removeHere = [indexPath]
+                        
+
+                        self.tableView.beginUpdates()
+                        self.tableView.deleteRows(at: [indexPath], with: .fade)
+                        self.tableView.endUpdates()
+                        
+                     self.tableView.reloadData()
+ 
+                    
+                        
+                       
+
+                    } else { print("nah") }
+
+
+                }
                 let holder4 = senderVC.character
                 holder = holder4!
                 
@@ -116,6 +134,8 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
                 
                 //print("\(holder2) supeup")
                 //print(holder3)
+                //tableView.reloadData()
+ 
                 addCustomFood(name: holder, months: holder2, days: holder3)
                 
             }
@@ -345,6 +365,7 @@ class ExpirationDateTableViewController: UITableViewController, SearchViewContro
         let indexPath = tableView.indexPathForSelectedRow
         let currentCell = tableView.cellForRow(at: indexPath!) as! ExpirationDateTableViewCell
         final = currentCell.foodNameLabel.text!
+        print(currentCell.foodNameLabel.text!)
         
     }
     

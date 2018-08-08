@@ -55,6 +55,9 @@ class EditFridgeItemViewController: UIViewController, UITextFieldDelegate, UIPic
         doneButton.layer.cornerRadius = 5
         doneButton.layer.borderColor = UIColor.white.cgColor
         doneButton.layer.borderWidth = 1.0
+        
+        editNameTextField.attributedPlaceholder = NSAttributedString(string: "name",
+                                                                       attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
     UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font : UIFont(name: "PingFang HK", size: 15.0)!], for: .normal)
     }
     
