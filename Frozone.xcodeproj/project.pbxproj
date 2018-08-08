@@ -400,7 +400,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: junhee071@gmail.com (4H7TD85SU6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jun Hee Han (4H7TD85SU6)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Z8383B8PH4;
 				INFOPLIST_FILE = Food/Info.plist;
@@ -410,10 +410,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MakeSchool.Frozone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7ab923e3-bb87-465d-be09-003e89913e8d";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = FrozoneDevelopmentProfile;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -434,7 +434,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = FrozoneDistributionProfile;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
